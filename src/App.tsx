@@ -1,23 +1,29 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
+import ComingSoonPage from './pages/ComingSoonPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
+  const showComingSoon = import.meta.env.VITE_SHOW_COMING_SOON !== 'false';
+
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        {showComingSoon ? (
+          <Route path="/" element={<ComingSoonPage />} />
+        ) : (
+          <Route path="/" element={<Layout><HomePage /></Layout>} />
+        )}
+        <Route path="/landing-preview" element={<Layout><HomePage /></Layout>} />
+        <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
+        <Route path="/privacy-policy" element={<Layout><PrivacyPolicyPage /></Layout>} />
+        <Route path="/terms" element={<Layout><TermsPage /></Layout>} />
+        <Route path="*" element={<Layout><NotFoundPage /></Layout>} />
+      </Routes>
     </BrowserRouter>
   );
 }
