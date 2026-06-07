@@ -12,7 +12,7 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-black text-white">دليل السبحي</h2>
           <p className="mt-4 max-w-md leading-8 text-white/62">
-            منصة مستقلة لتنظيم الإيجارات وخدمات السكان والتواصل داخل الكمباوند.
+            منصة مستقلة لتنظيم الإيجارات وخدمات السكان والتواصل داخل الكمبوند.
           </p>
         </div>
         <div className="space-y-3 text-white/70">

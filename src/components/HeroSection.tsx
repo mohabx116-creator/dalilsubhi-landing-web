@@ -19,13 +19,13 @@ export default function HeroSection() {
         <div className="max-w-3xl text-right">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d6b25e]/40 bg-[#d6b25e]/12 px-4 py-2 text-sm font-semibold text-[#f4d98c] shadow-[0_0_40px_rgba(214,178,94,.18)]">
             <Sparkles size={17} />
-            منصة رقمية راقية لخدمات الكمباوند
+            منصة رقمية راقية لخدمات الكمبوند
           </div>
           <h1 className="max-w-4xl text-4xl font-black leading-tight text-white sm:text-5xl lg:text-7xl">
-            دليل السبحي — بوابتك الذكية لخدمات الكمباوند
+            دليل السبحي — بوابتك الذكية لخدمات الكمبوند
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-9 text-white/76 sm:text-xl">
-            تجربة رقمية راقية تجمع الإيجارات، خدمات السكان، التواصل، والمتابعة في مكان واحد داخل كمباوند السبحي.
+            تجربة رقمية راقية تجمع الإيجارات، خدمات السكان، التواصل، والمتابعة في مكان واحد داخل كمبوند السبحي.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#d6b25e] px-7 py-4 font-bold text-[#071614] shadow-[0_18px_45px_rgba(214,178,94,.24)] transition hover:bg-[#f4d98c]" href={RENTALS_URL} rel="noopener noreferrer" target="_blank">

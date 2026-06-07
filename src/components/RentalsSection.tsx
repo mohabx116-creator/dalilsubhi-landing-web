@@ -22,7 +22,7 @@ export default function RentalsSection() {
           </a>
         </div>
         <div className="relative min-h-72 overflow-hidden rounded-[28px] border border-white/12">
-          <img alt="وحدات سكنية داخل الكمباوند" className="h-full min-h-72 w-full object-cover" src={rentalsImage} />
+          <img alt="وحدات سكنية داخل الكمبوند" className="h-full min-h-72 w-full object-cover" src={rentalsImage} />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,22,20,.08),rgba(7,22,20,.78))]" />
           <div className="absolute bottom-5 right-5 rounded-2xl border border-white/16 bg-[#071614]/74 px-5 py-4 backdrop-blur-lg">
             <p className="text-sm font-bold text-[#f4d98c]">خصوصية واضحة</p>
