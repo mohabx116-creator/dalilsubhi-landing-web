@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ScrollToTop } from './components/ScrollToTop';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import ComingSoonPage from './pages/ComingSoonPage';
@@ -12,6 +13,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {showComingSoon ? (
           <Route path="/" element={<ComingSoonPage />} />
