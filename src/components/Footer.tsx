@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone } from 'lucide-react';
-import { ADMIN_URL } from '../lib/config/links';
+import { ADMIN_URL, SERVICES_URL } from '../lib/config/links';
 
 const phone = '+201027613133';
 const email = 'mohabx116@gmail.com';
@@ -26,6 +26,7 @@ export default function Footer() {
           </a>
         </div>
         <nav className="grid gap-3 text-white/70 sm:grid-cols-2 lg:grid-cols-1">
+          <a href={SERVICES_URL} rel="noopener noreferrer" target="_blank">الخدمات والمرافق</a>
           <Link to="/privacy-policy">سياسة الخصوصية</Link>
           <Link to="/terms">الشروط والأحكام</Link>
           <Link to="/contact">تواصل معنا</Link>

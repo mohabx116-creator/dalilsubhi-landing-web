@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Menu, Users, X, ArrowLeft } from 'lucide-react';
-import { RENTALS_URL, RESIDENT_APP_URL } from '../lib/config/links';
+import { RENTALS_URL, RESIDENT_APP_URL, SERVICES_URL } from '../lib/config/links';
 
 const navItems = [
   { label: 'الرئيسية', href: '/' },
+  { label: 'الخدمات والمرافق', href: SERVICES_URL },
   { label: 'الإيجارات', href: '/#rentals' },
   { label: 'خدمات السكان', href: '/#resident-services' },
   { label: 'المرافق', href: '/#facilities' },
@@ -40,6 +41,10 @@ export default function Header() {
               <a className="transition hover:text-[#f4d98c]" href={item.href} key={item.label} onClick={() => handleAnchorClick(item.href)}>
                 {item.label}
               </a>
+            ) : item.href.startsWith('http') ? (
+              <a className="transition hover:text-[#f4d98c]" href={item.href} key={item.label} target="_blank" rel="noopener noreferrer">
+                {item.label}
+              </a>
             ) : (
               <Link className="transition hover:text-[#f4d98c]" key={item.label} to={item.href}>
                 {item.label}
@@ -69,6 +74,10 @@ export default function Header() {
           {navItems.map((item) =>
             item.href.startsWith('/#') ? (
               <a className="rounded-2xl px-4 py-3 text-white/78 hover:bg-white/8" href={item.href} key={item.label} onClick={() => handleAnchorClick(item.href)}>
+                {item.label}
+              </a>
+            ) : item.href.startsWith('http') ? (
+              <a className="rounded-2xl px-4 py-3 text-white/78 hover:bg-white/8 text-right block" href={item.href} key={item.label} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                 {item.label}
               </a>
             ) : (
