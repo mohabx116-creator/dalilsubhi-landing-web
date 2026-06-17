@@ -1,21 +1,23 @@
+import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import AboutSection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
 import RentalsSection from '../components/RentalsSection';
-import ResidentServicesSection from '../components/ResidentServicesSection';
-import FacilitiesSection from '../components/FacilitiesSection';
-import WhyDalilSubhiSection from '../components/WhyDalilSubhiSection';
-import ContactSection from '../components/ContactSection';
+import CommunityLinksSection from '../components/CommunityLinksSection';
+import AboutSection from '../components/AboutSection';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   return (
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <RentalsSection />
-      <ResidentServicesSection />
-      <FacilitiesSection />
-      <WhyDalilSubhiSection />
-      <ContactSection />
-    </main>
+    <div className="min-h-screen bg-white text-gray-900 font-sans" dir="rtl">
+      <Header />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <RentalsSection />
+        <CommunityLinksSection />
+        <AboutSection />
+      </main>
+      <Footer />
+    </div>
   );
 }

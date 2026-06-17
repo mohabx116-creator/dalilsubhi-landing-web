@@ -1,33 +1,54 @@
-import { ArrowLeft, KeyRound } from 'lucide-react';
-import { RENTALS_URL } from '../lib/config/links';
-
-const rentalsImage =
-  'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85';
+import { Home, Megaphone, MessageCircle } from 'lucide-react';
+import { RENTALS_URL, OWNERS_URL } from '../lib/config/links';
+import bgImage from '../assets/luxury-interior.png';
 
 export default function RentalsSection() {
+  const cards = [
+    {
+      title: 'الإيجارات المتاحة',
+      text: 'اعرض الوحدات المتاحة وتواصل عبر واتساب لاستكمال الحجز.',
+      cta: 'تصفح الإيجارات',
+      link: RENTALS_URL,
+      icon: <Home size={32} className="text-[#d6b25e]" />
+    },
+    {
+      title: 'أعلن عن وحدتك',
+      text: 'أرسل بيانات وحدتك للمراجعة ليتم نشر الإعلان بعد موافقة الإدارة.',
+      cta: 'أعلن عن وحدتك',
+      link: OWNERS_URL,
+      icon: <Megaphone size={32} className="text-[#d6b25e]" />
+    },
+    {
+      title: 'حجز عبر واتساب',
+      text: 'التواصل والحجز يتم من خلال واتساب بدون تعقيد.',
+      cta: 'ابدأ الآن',
+      link: RENTALS_URL,
+      icon: <MessageCircle size={32} className="text-[#d6b25e]" />
+    }
+  ];
+
   return (
-    <section id="rentals" className="px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-stretch">
-        <div className="rounded-[28px] border border-white/12 bg-white/[.055] p-7 sm:p-10">
-          <div className="grid h-14 w-14 place-items-center rounded-2xl border border-[#d6b25e]/35 bg-[#d6b25e]/12 text-[#f4d98c]">
-            <KeyRound size={26} />
-          </div>
-          <h2 className="mt-7 text-3xl font-black text-white sm:text-4xl">بوابة إيجارات منظمة وآمنة</h2>
-          <p className="mt-5 max-w-xl text-lg leading-9 text-white/70">
-            استعرض الوحدات المتاحة، أرسل طلب معاينة، وتواصل مع الإدارة بدون كشف بيانات الملاك للعامة.
-          </p>
-          <a className="mt-8 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#d6b25e] px-6 py-3 font-bold text-[#071614] transition hover:bg-[#f4d98c]" href={RENTALS_URL} rel="noopener noreferrer" target="_blank">
-            تصفح وحدات الإيجار
-            <ArrowLeft size={18} />
-          </a>
-        </div>
-        <div className="relative min-h-72 overflow-hidden rounded-[28px] border border-white/12">
-          <img alt="وحدات سكنية داخل الكمبوند" className="h-full min-h-72 w-full object-cover" src={rentalsImage} />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,22,20,.08),rgba(7,22,20,.78))]" />
-          <div className="absolute bottom-5 right-5 rounded-2xl border border-white/16 bg-[#071614]/74 px-5 py-4 backdrop-blur-lg">
-            <p className="text-sm font-bold text-[#f4d98c]">خصوصية واضحة</p>
-            <p className="mt-1 text-white/78">طلبات الإيجار بدون كشف بيانات الملاك للعامة</p>
-          </div>
+    <section className="relative overflow-hidden bg-[#071614] py-24 text-white">
+      <div className="absolute inset-0 z-0">
+        <img alt="إيجارات المنطقة" className="h-full w-full object-cover opacity-10" src={bgImage} />
+        <div className="absolute inset-0 bg-[#071614]/80" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl font-black text-white sm:text-4xl">إيجارات المنطقة</h2>
+        <p className="mt-4 text-lg text-white/70">تصفح الإعلانات المتاحة وقارن السعر والمواصفات، أو أعلن عن وحدتك بسهولة.</p>
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-right">
+          {cards.map((card, i) => (
+            <div key={i} className="flex flex-col rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md transition hover:bg-white/10">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#d6b25e]/10">
+                {card.icon}
+              </div>
+              <h3 className="mb-3 text-2xl font-bold text-white">{card.title}</h3>
+              <p className="mb-8 flex-1 text-white/70 leading-relaxed">{card.text}</p>
+              <a href={card.link} className="inline-flex items-center text-lg font-bold text-[#d6b25e] hover:text-white transition">
+                {card.cta} &larr;
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

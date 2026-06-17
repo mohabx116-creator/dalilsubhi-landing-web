@@ -1,36 +1,43 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone } from 'lucide-react';
-import { ADMIN_URL } from '../lib/config/links';
-
-const phone = '+201027613133';
-const email = 'mohabx116@gmail.com';
+import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
+import { SERVICES_URL, RENTALS_URL, OWNERS_URL, WHATSAPP_GROUP_URL, FACEBOOK_GROUP_URL, MAIN_URL } from '../lib/config/links';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#05110f] px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1fr_1fr] lg:grid-cols-[1.2fr_1fr_1fr]">
-        <div>
-          <h2 className="text-2xl font-black text-white">دليل السبحي</h2>
-          <p className="mt-4 max-w-md leading-8 text-white/62">
-            منصة مستقلة لتنظيم الإيجارات وخدمات السكان والتواصل داخل الكمبوند.
-          </p>
+    <footer className="border-t border-[#0fa37f]/10 bg-white pt-16 pb-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center gap-3 mb-6">
+              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-gray-100 shadow-sm">
+                <img src={dalilSubhiLogo} alt="دليل صبحي" className="h-full w-full object-contain" />
+              </div>
+              <span className="text-2xl font-black text-[#071614]">دليل صبحي</span>
+            </Link>
+            <p className="max-w-sm text-lg text-gray-600 leading-relaxed">
+              منصة محلية لتسهيل الوصول إلى خدمات المنطقة والإيجارات والروابط المهمة.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-6 text-lg font-bold text-[#071614]">روابط سريعة</h3>
+            <ul className="space-y-4 font-medium text-gray-600">
+              <li><a href={MAIN_URL} className="hover:text-[#0fa37f] transition">الصفحة الرئيسية</a></li>
+              <li><a href={SERVICES_URL} className="hover:text-[#0fa37f] transition">خدمات المنطقة</a></li>
+              <li><a href={RENTALS_URL} className="hover:text-[#0fa37f] transition">الإيجارات</a></li>
+              <li><a href={OWNERS_URL} className="hover:text-[#0fa37f] transition">أعلن عن وحدتك</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-6 text-lg font-bold text-[#071614]">تواصل معنا</h3>
+            <ul className="space-y-4 font-medium text-gray-600">
+              <li><a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition">جروب الواتساب</a></li>
+              <li><a href={FACEBOOK_GROUP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#1877F2] transition">جروب الفيس بوك</a></li>
+            </ul>
+          </div>
         </div>
-        <div className="space-y-3 text-white/70">
-          <a className="flex items-center gap-2 hover:text-[#f4d98c]" href={`tel:${phone}`}>
-            <Phone size={17} />
-            {phone}
-          </a>
-          <a className="flex items-center gap-2 hover:text-[#f4d98c]" href={`mailto:${email}`}>
-            <Mail size={17} />
-            {email}
-          </a>
+        <div className="mt-16 border-t border-gray-100 pt-8 text-center text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} دليل صبحي. جميع الحقوق محفوظة.</p>
         </div>
-        <nav className="grid gap-3 text-white/70 sm:grid-cols-2 lg:grid-cols-1">
-          <Link to="/privacy-policy">سياسة الخصوصية</Link>
-          <Link to="/terms">الشروط والأحكام</Link>
-          <Link to="/contact">تواصل معنا</Link>
-          <a href={ADMIN_URL} rel="noopener noreferrer" target="_blank">لوحة الإدارة</a>
-        </nav>
       </div>
     </footer>
   );

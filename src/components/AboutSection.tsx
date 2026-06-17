@@ -1,13 +1,13 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl text-center">
-        <p className="text-sm font-bold text-[#f4d98c]">عن المنصة</p>
-        <h2 className="mx-auto mt-4 max-w-4xl text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
-          منصة واحدة لتنظيم تجربة السكن داخل الكمبوند
-        </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-white/70">
-          دليل السبحي يساعد السكان والزوار والإدارة على الوصول إلى الخدمات الأساسية بشكل منظم، من بوابة الإيجارات وحتى متابعة الطلبات والخدمات.
+    <section id="about" className="bg-white py-24">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <div className="inline-flex items-center justify-center rounded-full bg-[#0fa37f]/10 px-6 py-2 text-sm font-bold text-[#0fa37f] mb-6">
+          عن المنصة
+        </div>
+        <h2 className="text-3xl font-black text-[#071614] sm:text-4xl mb-6">عن دليل صبحي</h2>
+        <p className="text-xl leading-relaxed text-gray-600">
+          دليل صبحي منصة محلية تساعد سكان المنطقة والزوار على الوصول إلى الخدمات والإيجارات والمعلومات المهمة بشكل أسهل وأوضح.
         </p>
       </div>
     </section>
