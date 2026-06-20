@@ -7,6 +7,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        <Route path="/" element={<ComingSoonPage />} />
         <Route path="*" element={<ComingSoonPage />} />
       </Routes>
     </BrowserRouter>
