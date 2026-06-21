@@ -1,13 +1,17 @@
+import { Link } from 'react-router-dom';
+
 export default function AboutSection() {
   return (
-    <section id="about" className="px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl text-center">
-        <p className="text-sm font-bold text-[#f4d98c]">عن المنصة</p>
-        <h2 className="mx-auto mt-4 max-w-4xl text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
-          منصة واحدة لتنظيم تجربة السكن داخل الكمبوند
-        </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-white/70">
-          دليل السبحي يساعد السكان والزوار والإدارة على الوصول إلى الخدمات الأساسية بشكل منظم، من بوابة الإيجارات وحتى متابعة الطلبات والخدمات.
+    <section id="about" className="bg-gray-50/50 py-16 backdrop-blur-[4px]">
+      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <h2 className="mb-6 text-3xl font-black text-[#071614] sm:text-4xl">عن دليل السبحي</h2>
+        <p className="mb-6 text-lg leading-relaxed text-gray-600">
+          دليل السبحي منصة آمنة لجميع عقارات وخدمات المنطقة، تجمع الروابط المهمة في تجربة واضحة وسهلة الوصول.
+        </p>
+        <p className="text-sm text-gray-500">
+          <Link to="/publishing-policy" className="underline underline-offset-4 transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
+            نلتزم بمعايير واضحة للنشر والإعلان بما يحفظ جودة المحتوى وموثوقيته.
+          </Link>
         </p>
       </div>
     </section>
