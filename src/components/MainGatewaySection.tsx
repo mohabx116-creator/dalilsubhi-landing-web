@@ -10,10 +10,9 @@ export default function MainGatewaySection() {
       <div className="pointer-events-none absolute right-0 bottom-0 h-96 w-96 translate-x-1/3 translate-y-1/3 rounded-full bg-[#0fa37f]/10 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-black text-[#071614] sm:text-5xl mb-4 tracking-tight">اختر وجهتك</h2>
-        <p className="text-xl text-gray-600/90 mb-16 max-w-2xl mx-auto">
-
-        </p>
+        <h2 className="text-3xl font-black text-[#071614] sm:text-4xl md:text-5xl mb-16 tracking-tight max-w-4xl mx-auto leading-tight sm:leading-tight md:leading-tight">
+          منصة آمنة لجميع عقارات وخدمات المنطقة
+        </h2>
 
         {/* Main Conversion Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-right">
