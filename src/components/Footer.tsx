@@ -25,6 +25,7 @@ export default function Footer() {
               <li><a href={SERVICES_URL} className="hover:text-[#0fa37f] transition">خدمات المنطقة</a></li>
               <li><a href={RENTALS_URL} className="hover:text-[#0fa37f] transition">الإيجارات</a></li>
               <li><a href={OWNERS_URL} className="hover:text-[#0fa37f] transition">أعلن عن وحدتك</a></li>
+              <li><Link to="/publishing-policy" className="hover:text-[#0fa37f] transition">سياسة النشر والإعلان</Link></li>
             </ul>
           </div>
           <div>
