@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import MainGatewaySection from '../components/MainGatewaySection';
 import ServicesSection from '../components/ServicesSection';
+import FacilitiesSection from '../components/FacilitiesSection';
 import CommunityLinksSection from '../components/CommunityLinksSection';
 import AboutSection from '../components/AboutSection';
 import Footer from '../components/Footer';
@@ -26,6 +27,7 @@ export default function HomePage() {
           <HeroSection />
           <MainGatewaySection />
           <ServicesSection />
+          <FacilitiesSection />
           <CommunityLinksSection />
           <AboutSection />
         </main>

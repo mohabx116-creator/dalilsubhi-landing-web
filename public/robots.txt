@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dalilsubhi.com/sitemap.xml
+Sitemap: https://dalilsubhi.com/sitemap.xml

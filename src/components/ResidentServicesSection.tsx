@@ -1,6 +1,5 @@
-import { ArrowLeft, Bell, MessageCircle, ShieldCheck, Users } from 'lucide-react';
+import { Bell, MessageCircle, ShieldCheck, Users } from 'lucide-react';
 import luxuryInterior from '../assets/luxury-interior.png';
-import { RESIDENT_APP_URL } from '../lib/config/links';
 
 export default function ResidentServicesSection() {
   const cards = [
@@ -22,7 +21,7 @@ export default function ResidentServicesSection() {
           </div>
           <h2 className="mt-7 text-3xl font-black text-white sm:text-4xl">خدمات السكان في مكان واحد</h2>
           <p className="mt-5 max-w-xl text-lg leading-9 text-white/70">
-            تطبيق السكان يسهّل الوصول إلى الخدمات، الطلبات، الشكاوى، الإشعارات، والدعم داخل الكمبوند.
+            هذا القسم مخصص للعرض التعريفي فقط ولا يفتح أي بوابة داخلية من الصفحة العامة.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-3">
             {cards.map(({ title, icon: Icon }) => (
@@ -32,10 +31,6 @@ export default function ResidentServicesSection() {
               </div>
             ))}
           </div>
-          <a className="mt-8 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#d6b25e] px-6 py-3 font-bold text-[#071614] transition hover:bg-[#f4d98c]" href={RESIDENT_APP_URL} rel="noopener noreferrer" target="_blank">
-            دخول تطبيق السكان
-            <ArrowLeft size={18} />
-          </a>
         </div>
       </div>
     </section>
