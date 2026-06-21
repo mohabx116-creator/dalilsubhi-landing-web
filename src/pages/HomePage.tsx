@@ -1,38 +1,21 @@
-import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import MainGatewaySection from '../components/MainGatewaySection';
-import ServicesSection from '../components/ServicesSection';
-import FacilitiesSection from '../components/FacilitiesSection';
-import CommunityLinksSection from '../components/CommunityLinksSection';
 import AboutSection from '../components/AboutSection';
-import Footer from '../components/Footer';
-import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
+import RentalsSection from '../components/RentalsSection';
+import ResidentServicesSection from '../components/ResidentServicesSection';
+import FacilitiesSection from '../components/FacilitiesSection';
+import WhyDalilSubhiSection from '../components/WhyDalilSubhiSection';
+import ContactSection from '../components/ContactSection';
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-white text-gray-900 font-sans" dir="rtl">
-      {/* Fixed Background Watermark */}
-      <div
-        className="pointer-events-none fixed inset-0 z-0 bg-center bg-no-repeat opacity-[0.20] mix-blend-multiply"
-        style={{
-          backgroundImage: `url(${dalilSubhiLogo})`,
-          backgroundSize: '800px',
-        }}
-      />
-
-      {/* Main Content Wrapper */}
-      <div className="relative z-10">
-        <Header />
-        <main>
-          <HeroSection />
-          <MainGatewaySection />
-          <ServicesSection />
-          <FacilitiesSection />
-          <CommunityLinksSection />
-          <AboutSection />
-        </main>
-        <Footer />
-      </div>
-    </div>
+    <main>
+      <HeroSection />
+      <AboutSection />
+      <RentalsSection />
+      <ResidentServicesSection />
+      <FacilitiesSection />
+      <WhyDalilSubhiSection />
+      <ContactSection />
+    </main>
   );
 }

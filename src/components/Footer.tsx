@@ -1,47 +1,36 @@
 import { Link } from 'react-router-dom';
-import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
-import { FACEBOOK_GROUP_URL, MAIN_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL } from '../lib/config/links';
+import { Mail, Phone } from 'lucide-react';
+import { ADMIN_URL } from '../lib/config/links';
+
+const phone = '+201027613133';
+const email = 'mohabx116@gmail.com';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#0fa37f]/10 bg-white/50 pt-16 pb-8 backdrop-blur-[4px]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
-            <Link to="/" className="mb-6 flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-gray-100 shadow-sm">
-                <img src={dalilSubhiLogo} alt="دليل السبحي" className="h-full w-full object-contain" />
-              </div>
-              <span className="text-2xl font-black text-[#071614]">دليل السبحي</span>
-            </Link>
-            <p className="max-w-sm text-lg leading-relaxed text-gray-600">
-              منصة آمنة لجميع عقارات وخدمات المنطقة.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="mb-6 text-lg font-bold text-[#071614]">روابط سريعة</h3>
-            <ul className="space-y-4 font-medium text-gray-600">
-              <li><a href={MAIN_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">الصفحة الرئيسية</a></li>
-              <li><a href={SERVICES_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">خدمات المنطقة</a></li>
-              <li><a href={RENTALS_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">الإيجارات</a></li>
-              <li><a href={OWNERS_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">أعلن عن وحدتك</a></li>
-              <li><Link to="/publishing-policy" className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">سياسة النشر والإعلان</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-6 text-lg font-bold text-[#071614]">تواصل معنا</h3>
-            <ul className="space-y-4 font-medium text-gray-600">
-              <li><a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="transition hover:text-[#25D366] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]">خدمة العملاء</a></li>
-              <li><a href={FACEBOOK_GROUP_URL} target="_blank" rel="noopener noreferrer" className="transition hover:text-[#1877F2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1877F2]">جروب الفيس بوك</a></li>
-            </ul>
-          </div>
+    <footer className="border-t border-white/10 bg-[#05110f] px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1fr_1fr] lg:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <h2 className="text-2xl font-black text-white">دليل السبحي</h2>
+          <p className="mt-4 max-w-md leading-8 text-white/62">
+            منصة مستقلة لتنظيم الإيجارات وخدمات السكان والتواصل داخل الكمبوند.
+          </p>
         </div>
-
-        <div className="mt-16 border-t border-gray-100 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} دليل السبحي. جميع الحقوق محفوظة.</p>
+        <div className="space-y-3 text-white/70">
+          <a className="flex items-center gap-2 hover:text-[#f4d98c]" href={`tel:${phone}`}>
+            <Phone size={17} />
+            {phone}
+          </a>
+          <a className="flex items-center gap-2 hover:text-[#f4d98c]" href={`mailto:${email}`}>
+            <Mail size={17} />
+            {email}
+          </a>
         </div>
+        <nav className="grid gap-3 text-white/70 sm:grid-cols-2 lg:grid-cols-1">
+          <Link to="/privacy-policy">سياسة الخصوصية</Link>
+          <Link to="/terms">الشروط والأحكام</Link>
+          <Link to="/contact">تواصل معنا</Link>
+          <a href={ADMIN_URL} rel="noopener noreferrer" target="_blank">لوحة الإدارة</a>
+        </nav>
       </div>
     </footer>
   );
