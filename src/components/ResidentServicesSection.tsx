@@ -13,7 +13,7 @@ export default function ResidentServicesSection() {
     <section id="resident-services" className="px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 lg:items-stretch">
         <div className="relative min-h-72 overflow-hidden rounded-[28px] border border-white/12 lg:order-2">
-          <img alt="خدمات السكان داخل الكمبوند" className="h-full min-h-72 w-full object-cover" src={luxuryInterior} />
+          <img alt="خدمات السكان داخل الكمبوند" className="h-full min-h-72 w-full object-cover" src={luxuryInterior} loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,22,20,.1),rgba(7,22,20,.78))]" />
         </div>
         <div className="rounded-[28px] border border-white/12 bg-white/[.055] p-7 sm:p-10">

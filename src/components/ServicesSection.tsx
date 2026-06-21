@@ -1,47 +1,36 @@
-import { MapPin, Wrench, Users } from 'lucide-react';
-import { SERVICES_URL } from '../lib/config/links';
+import { ShieldCheck, Home, Users } from 'lucide-react';
 
 export default function ServicesSection() {
   const cards = [
     {
-      title: 'مرافق المنطقة',
-      text: 'تعرف على أهم المرافق المتاحة حولك ومعلومات التواصل والموقع.',
-      cta: 'تصفح المرافق',
-      link: SERVICES_URL,
-      icon: <MapPin size={32} className="text-[#0fa37f]" />
+      title: 'خدمات امنة',
+      text: 'روابط مباشرة للخدمات والمرافق المهمة في المنطقة.',
+      icon: <ShieldCheck size={32} className="text-[#0fa37f]" />
     },
     {
-      title: 'الخدمات الفنية',
-      text: 'وصول سريع إلى خدمات الصيانة والتشطيب والخدمات المساندة.',
-      cta: 'تصفح الخدمات',
-      link: SERVICES_URL,
-      icon: <Wrench size={32} className="text-[#0fa37f]" />
+      title: 'إيجارات المنطقة',
+      text: 'وصول سريع لإعلانات الإيجار المتاحة وطلب التواصل والحجز.',
+      icon: <Home size={32} className="text-[#d6b25e]" />
     },
     {
-      title: 'روابط المجتمع',
-      text: 'روابط مباشرة لجروبات المنطقة ومصادر التواصل المهمة.',
-      cta: 'روابط المجتمع',
-      link: '#community',
+      title: 'تواصل مع الادارة للاستفسارات والاخبار',
+      text: 'جروبات وروابط مهمة لمتابعة أخبار المنطقة.',
       icon: <Users size={32} className="text-[#0fa37f]" />
     }
   ];
 
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-gray-50/50 backdrop-blur-[4px] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-black text-[#071614] sm:text-4xl">خدمات المنطقة</h2>
-        <p className="mt-4 text-lg text-gray-600">استعرض المرافق والخدمات الفنية وروابط المجتمع بسهولة.</p>
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-right">
+        <h2 className="text-3xl font-black text-[#071614] sm:text-4xl">ماذا يقدم دليل السبحي؟</h2>
+        <div className="mt-12 grid gap-8 sm:grid-cols-3 text-right">
           {cards.map((card, i) => (
-            <div key={i} className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-xl shadow-gray-200/50 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-200/60 p-8 border border-gray-100">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0fa37f]/10">
+            <div key={i} className="flex flex-col overflow-hidden rounded-3xl bg-white/90 shadow-lg shadow-gray-200/40 p-8 border border-gray-100">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-50 border border-gray-100">
                 {card.icon}
               </div>
-              <h3 className="mb-3 text-2xl font-bold text-[#071614]">{card.title}</h3>
-              <p className="mb-8 flex-1 text-gray-600 leading-relaxed">{card.text}</p>
-              <a href={card.link} className="inline-flex items-center text-lg font-bold text-[#0fa37f] hover:text-[#071614] transition">
-                {card.cta} &larr;
-              </a>
+              <h3 className="mb-2 text-xl font-bold text-[#071614]">{card.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{card.text}</p>
             </div>
           ))}
         </div>

@@ -24,7 +24,7 @@ export default function FacilitiesSection() {
             <article className="feature-card" key={title}>
               <Icon className="text-[#f4d98c]" size={27} />
               <h3 className="mt-5 text-xl font-bold text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/62">واجهة واضحة تساعد على الوصول للخدمة المناسبة بسرعة وهدوء.</p>
+              <p className="mt-3 text-sm leading-7 text-white/62">منصة امنة لجميع عقارات وخدمات المنطقة.</p>
             </article>
           ))}
         </div>
