@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
-import { FACEBOOK_GROUP_URL, MAIN_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL } from '../lib/config/links';
+import { FACEBOOK_GROUP_URL, MAIN_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL, REAL_ESTATE_URL } from '../lib/config/links';
 
 export default function Footer() {
   return (
@@ -13,48 +13,53 @@ export default function Footer() {
               className="mb-5 flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]"
             >
               <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-gray-100 shadow-sm">
-                <img src={dalilSubhiLogo} alt="Ø¯Ù„ÙŠÙ„ Ø§Ù„Ø³Ø¨Ø­ÙŠ" className="h-full w-full object-contain" />
+                <img src={dalilSubhiLogo} alt="دليل السبحي" className="h-full w-full object-contain" />
               </div>
-              <span className="text-2xl font-black text-[#071614]">Ø¯Ù„ÙŠÙ„ Ø§Ù„Ø³Ø¨Ø­ÙŠ</span>
+              <span className="text-2xl font-black text-[#071614]">دليل السبحي</span>
             </Link>
             <p className="max-w-md text-base leading-8 text-gray-600">
-              Ù…Ù†ØµØ© Ø¢Ù…Ù†Ø© Ù„Ø¬Ù…ÙŠØ¹ Ø¹Ù‚Ø§Ø±Ø§Øª ÙˆØ®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ù†Ø·Ù‚Ø©.
+              منصة آمنة لجميع عقارات وخدمات المنطقة.
             </p>
           </div>
 
           <div>
-            <h3 className="mb-5 text-lg font-bold text-[#071614]">Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©</h3>
+            <h3 className="mb-5 text-lg font-bold text-[#071614]">روابط سريعة</h3>
             <ul className="space-y-3 text-sm font-medium leading-7 text-gray-600">
               <li>
                 <a href={MAIN_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-                  Ø§Ù„ØµÙØ­Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©
+                  الصفحة الرئيسية
                 </a>
               </li>
               <li>
                 <a href={SERVICES_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-                  Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ù†Ø·Ù‚Ø©
+                  خدمات المنطقة
                 </a>
               </li>
               <li>
                 <a href={RENTALS_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-                  Ø§Ù„Ø¥ÙŠØ¬Ø§Ø±Ø§Øª
+                  الإيجارات
+                </a>
+              </li>
+              <li>
+                <a href={REAL_ESTATE_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
+                  العقارات والأراضي
                 </a>
               </li>
               <li>
                 <a href={OWNERS_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-                  Ø£Ø¹Ù„Ù† Ø¹Ù† ÙˆØ­Ø¯ØªÙƒ
+                  أعلن عن وحدتك
                 </a>
               </li>
               <li>
                 <Link to="/publishing-policy" className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-                  Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ù†Ø´Ø± ÙˆØ§Ù„Ø¥Ø¹Ù„Ø§Ù†
+                  سياسة النشر والإعلان
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-5 text-lg font-bold text-[#071614]">ØªÙˆØ§ØµÙ„ Ù…Ø¹Ù†Ø§</h3>
+            <h3 className="mb-5 text-lg font-bold text-[#071614]">تواصل معنا</h3>
             <ul className="space-y-3 text-sm font-medium leading-7 text-gray-600">
               <li>
                 <a
@@ -63,7 +68,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="transition hover:text-[#25D366] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]"
                 >
-                  Ø®Ø¯Ù…Ø© Ø§Ù„Ø¹Ù…Ù„Ø§Ø¡
+                  خدمة العملاء
                 </a>
               </li>
               <li>
@@ -73,7 +78,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="transition hover:text-[#1877F2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1877F2]"
                 >
-                  Ø¬Ø±ÙˆØ¨ Ø§Ù„ÙÙŠØ³ Ø¨ÙˆÙƒ
+                  جروب الفيس بوك
                 </a>
               </li>
             </ul>
@@ -81,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-100 pt-6 text-center text-sm text-gray-500 sm:mt-16 sm:pt-8">
-          <p>&copy; {new Date().getFullYear()} Ø¯Ù„ÙŠÙ„ Ø§Ù„Ø³Ø¨Ø­ÙŠ. Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©.</p>
+          <p>&copy; {new Date().getFullYear()} دليل السبحي. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

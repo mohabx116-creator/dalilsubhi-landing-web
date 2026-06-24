@@ -1,5 +1,5 @@
 import { ArrowLeft, Building, Home, Megaphone, MessageCircle, Users, Wrench } from 'lucide-react';
-import { FACEBOOK_GROUP_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL } from '../lib/config/links';
+import { FACEBOOK_GROUP_URL, OWNERS_URL, RENTALS_URL, REAL_ESTATE_URL, SERVICES_URL, WHATSAPP_GROUP_URL } from '../lib/config/links';
 
 export default function MainGatewaySection() {
   return (
@@ -18,9 +18,9 @@ export default function MainGatewaySection() {
             <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0fa37f]/10 transition duration-300 group-hover:scale-105 group-hover:bg-[#0fa37f]/20">
               <Wrench size={30} className="text-[#0fa37f]" />
             </div>
-            <h3 className="mb-3 text-2xl font-black text-[#071614] sm:text-3xl">Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ù†Ø·Ù‚Ø©</h3>
+            <h3 className="mb-3 text-2xl font-black text-[#071614] sm:text-3xl">خدمات المنطقة</h3>
             <p className="mb-8 flex-1 text-base leading-8 text-gray-600 sm:text-lg">
-              Ø§Ø³ØªØ¹Ø±Ø¶ Ø¯Ù„ÙŠÙ„ Ø§Ù„Ø®Ø¯Ù…Ø§Øª ÙˆØ§Ù„Ù…Ø±Ø§ÙÙ‚ Ø§Ù„Ù…ØªØ§Ø­Ø© Ù„Ù„Ù…Ù†Ø·Ù‚Ø© Ù…Ù† Ù…ÙƒØ§Ù† ÙˆØ§Ø­Ø¯.
+              استعرض دليل الخدمات والمرافق المتاحة للمنطقة من مكان واحد بسهولة.
             </p>
             <a
               href={SERVICES_URL}
@@ -36,9 +36,9 @@ export default function MainGatewaySection() {
             <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#d6b25e]/10 transition duration-300 group-hover:scale-105 group-hover:bg-[#d6b25e]/20">
               <Home size={30} className="text-[#d6b25e]" />
             </div>
-            <h3 className="mb-3 text-2xl font-black text-[#071614] sm:text-3xl">Ø§Ù„Ø¥ÙŠØ¬Ø§Ø±Ø§Øª</h3>
+            <h3 className="mb-3 text-2xl font-black text-[#071614] sm:text-3xl">الإيجارات</h3>
             <p className="mb-8 flex-1 text-base leading-8 text-gray-600 sm:text-lg">
-              ØªØµÙØ­ Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø§Ù„Ø¥ÙŠØ¬Ø§Ø± Ø§Ù„Ù…Ø¹ØªÙ…Ø¯Ø© Ø£Ùˆ Ø£Ø¹Ù„Ù† Ø¹Ù† ÙˆØ­Ø¯ØªÙƒ Ø¨Ø³Ù‡ÙˆÙ„Ø©.
+              تصفح إعلانات الإيجار المعتمدة أو أعلن عن وحدتك السكنية بسهولة.
             </p>
             <a
               href={RENTALS_URL}
@@ -49,20 +49,22 @@ export default function MainGatewaySection() {
             </a>
           </div>
 
-          <div className="flex h-full flex-col overflow-hidden rounded-[30px] border border-gray-100 bg-white/70 p-7 shadow-sm backdrop-blur-sm sm:p-8">
-            <div className="absolute top-6 left-6 rounded-full border border-[#d6b25e]/20 bg-[#d6b25e]/5 px-4 py-1 text-sm font-bold text-[#c4962c]">
-              قريباً
+          <div className="group flex h-full flex-col overflow-hidden rounded-[30px] border border-[#2c3a30]/20 bg-white/95 p-7 shadow-[0_8px_30px_rgba(0,0,0,0.04)] backdrop-blur-md transition hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(44,58,48,0.08)] sm:p-8">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#2c3a30]/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2c3a30]/10 transition duration-300 group-hover:scale-105 group-hover:bg-[#2c3a30]/20">
+              <Building size={30} className="text-[#2c3a30]" />
             </div>
-            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50">
-              <Building size={30} className="text-gray-400" />
-            </div>
-            <h3 className="mb-3 text-2xl font-black text-gray-500 sm:text-3xl">العقارات</h3>
-            <p className="mb-8 flex-1 text-base leading-8 text-gray-500 sm:text-lg">
-              قسم مخصص لعرض فرص العقارات والأراضي في المنطقة سيتم إطلاقه قريباً.
+            <h3 className="mb-3 text-2xl font-black text-[#071614] sm:text-3xl">العقارات والأراضي</h3>
+            <p className="mb-8 flex-1 text-base leading-8 text-gray-600 sm:text-lg font-medium">
+              تصفح فرص شراء وبيع العقارات والأراضي السكنية والتجارية بالمنطقة.
             </p>
-            <div className="inline-flex min-h-14 cursor-not-allowed items-center justify-center gap-2 rounded-2xl border border-gray-100 bg-gray-50 px-6 text-base font-bold text-gray-400">
-              قريباً
-            </div>
+            <a
+              href={REAL_ESTATE_URL}
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#2c3a30] to-[#1e2821] px-6 text-base font-bold text-white shadow-md shadow-[#2c3a30]/20 transition hover:shadow-lg hover:shadow-[#2c3a30]/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2c3a30]"
+            >
+              دخول العقارات والأراضي
+              <ArrowLeft size={18} />
+            </a>
           </div>
         </div>
 
