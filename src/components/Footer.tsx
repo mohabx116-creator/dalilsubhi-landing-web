@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
-import { FACEBOOK_GROUP_URL, MAIN_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL, REAL_ESTATE_URL } from '../lib/config/links';
+import { FACEBOOK_GROUP_URL, MAIN_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL } from '../lib/config/links';
 
 export default function Footer() {
   return (
@@ -38,11 +38,6 @@ export default function Footer() {
               <li>
                 <a href={RENTALS_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
                   الإيجارات
-                </a>
-              </li>
-              <li>
-                <a href={REAL_ESTATE_URL} className="transition hover:text-[#0fa37f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]">
-                  العقارات والأراضي
                 </a>
               </li>
               <li>
