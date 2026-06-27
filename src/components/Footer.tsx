@@ -18,7 +18,7 @@ export default function Footer() {
               <span className="text-2xl font-black text-[#071614]">دليل السبحي</span>
             </Link>
             <p className="max-w-md text-base leading-8 text-gray-600">
-              منصة آمنة لجميع عقارات وخدمات المنطقة.
+              بوابة آمنة للخدمات والإيجارات والعقارات في المنطقة
             </p>
           </div>
 

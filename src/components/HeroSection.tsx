@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto flex min-h-[52vh] w-full max-w-6xl flex-col items-center px-4 pb-12 pt-10 text-center sm:px-6 sm:pb-14 sm:pt-14 lg:min-h-[60vh] lg:px-8 lg:pt-16">
         <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[#ebdcb9] bg-white/80 px-4 py-1.5 text-xs font-bold text-[#5d4c18] shadow-sm backdrop-blur-md">
           <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#0fa37f]" />
-          بوابة شاملة للخدمات والإيجارات والعقارات
+          بوابة آمنة وشاملة للمنطقة
         </div>
 
         <div className="mx-auto flex flex-col items-center justify-center pt-2 pb-4 sm:pt-4">
@@ -47,10 +47,10 @@ export default function HeroSection() {
 
         <div className="max-w-3xl">
           <h1 className="text-3xl font-black leading-[1.3] tracking-tight text-[#071614] sm:text-4xl md:text-5xl">
-            منصة واحدة لبحث الخدمات والإيجارات والعقارات في المنطقة
+            منصة آمنة تجمع الخدمات والإيجارات والعقارات
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#55605d] sm:text-base sm:leading-8">
-            وصول أوضح إلى ما يهم السكان والباحثين عن السكن والخدمات، مع مسارات مباشرة ومحسوبة لكل قسم.
+            ابحث بثقة عن ما تحتاجه في المنطقة، مع مسارات واضحة ومباشرة لكل قسم.
           </p>
         </div>
 
