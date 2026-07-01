@@ -4,20 +4,20 @@ import { FACEBOOK_GROUP_URL, MAIN_URL, OWNERS_URL, RENTALS_URL, SERVICES_URL, WH
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#0fa37f]/10 bg-white/55 pt-14 pb-8 backdrop-blur-[4px] sm:pt-16">
+    <footer className="border-t border-[#0fa37f]/10 bg-white/55 pt-10 pb-6 backdrop-blur-[4px] sm:pt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link
               to="/"
-              className="mb-5 flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]"
+              className="mb-4 flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]"
             >
-              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-gray-100 shadow-sm">
+              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-gray-100 shadow-sm">
                 <img src={dalilSubhiLogo} alt="دليل السبحي" className="h-full w-full object-contain" />
               </div>
-              <span className="text-2xl font-black text-[#071614]">دليل السبحي</span>
+              <span className="text-xl sm:text-2xl font-black text-[#071614]">دليل السبحي</span>
             </Link>
-            <p className="max-w-md text-base leading-8 text-gray-600">
+            <p className="max-w-md text-sm sm:text-base leading-relaxed sm:leading-8 text-gray-600">
               بوابة آمنة للخدمات والإيجارات والعقارات في المنطقة
             </p>
           </div>
