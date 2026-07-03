@@ -10,6 +10,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link
               to="/"
+              aria-label="دليل السبحي - الصفحة الرئيسية"
               className="mb-4 flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]"
             >
               <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-gray-100 shadow-sm">

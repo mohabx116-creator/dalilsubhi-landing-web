@@ -10,7 +10,7 @@ export default function ComingSoonPage() {
           <div className="mx-auto mb-8 w-[240px] sm:w-[320px] md:w-[360px]">
             <img
               src={logo}
-              alt="دليل السبحي - Dalil Subhi"
+              alt="شعار دليل السبحي الرسمي"
               className="h-auto w-full object-contain"
               draggable="false"
             />

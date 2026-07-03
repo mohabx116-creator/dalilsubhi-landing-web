@@ -47,7 +47,7 @@ export default function HeroSection() {
 
         <div className="max-w-3xl">
           <h1 className="text-2xl font-black leading-snug tracking-tight text-[#071614] sm:text-4xl md:text-5xl">
-            دليل السبحي | منصة آمنة تجمع الخدمات والإيجارات والعقارات
+            دليل السبحي — منصة الإيجارات والعقارات والخدمات في المنطقة
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-xs sm:text-base leading-relaxed text-[#55605d]">
             ابحث بثقة عن ما تحتاجه في المنطقة، مع مسارات واضحة ومباشرة لكل قسم.

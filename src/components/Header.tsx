@@ -12,6 +12,7 @@ export default function Header() {
       <div className="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:h-20 lg:px-8 lg:py-0">
         <Link
           to="/"
+          aria-label="دليل السبحي - الصفحة الرئيسية"
           className="group flex items-center gap-2.5 sm:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]"
         >
           <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[14px] border border-[#d6b25e]/30 shadow-sm transition group-hover:border-[#d6b25e]/50 sm:h-11 sm:w-11">
