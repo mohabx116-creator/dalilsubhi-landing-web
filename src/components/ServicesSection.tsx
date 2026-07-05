@@ -6,19 +6,19 @@ export default function ServicesSection() {
       title: 'خدمات آمنة',
       text: 'روابط مباشرة للخدمات والمرافق المهمة في المنطقة.',
       icon: <ShieldCheck size={32} className="text-[#0fa37f]" />,
-      href: '#ecosystem',
+      href: '#services-card',
     },
     {
       title: 'إيجارات المنطقة',
       text: 'وصول سريع لإعلانات الإيجار المعتمدة والتواصل عبر واتساب.',
       icon: <Home size={32} className="text-[#d6b25e]" />,
-      href: '#ecosystem',
+      href: '#rentals-card',
     },
     {
       title: 'تواصل واضح',
       text: 'روابط مهمة لمتابعة أخبار المنطقة والتواصل مع خدمة العملاء.',
       icon: <Users size={32} className="text-[#0fa37f]" />,
-      href: '#ecosystem',
+      href: '#community-card',
     },
   ];
 

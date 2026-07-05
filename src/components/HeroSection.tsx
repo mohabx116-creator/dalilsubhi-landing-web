@@ -1,12 +1,13 @@
-import { Building2, Home, Wrench } from 'lucide-react';
+import { Building2, Home, Map, Wrench } from 'lucide-react';
 import heroBg from '../assets/sebahi-gardens-hero.png';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
 
 export default function HeroSection() {
   const highlights = [
-    { label: 'الخدمات', icon: Wrench, tone: 'text-[#0fa37f]' },
-    { label: 'الإيجارات', icon: Home, tone: 'text-[#d6b25e]' },
-    { label: 'العقارات', icon: Building2, tone: 'text-[#8a6d22]' },
+    { label: 'البوابة المجتمعية', icon: Map, tone: 'text-[#0fa37f]', href: '#community' },
+    { label: 'الخدمات', icon: Wrench, tone: 'text-[#0fa37f]', href: '#services' },
+    { label: 'الإيجارات', icon: Home, tone: 'text-[#d6b25e]', href: '#rentals' },
+    { label: 'العقارات', icon: Building2, tone: 'text-[#8a6d22]', href: '#realestate' },
   ] as const;
 
   return (
@@ -54,11 +55,11 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="mt-6 grid w-full max-w-3xl grid-cols-3 gap-2 text-right sm:gap-3">
-          {highlights.map(({ label, icon: Icon, tone }) => (
+        <div className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-2 text-right sm:grid-cols-4 sm:gap-3">
+          {highlights.map(({ label, icon: Icon, tone, href }) => (
             <a
               key={label}
-              href="#ecosystem"
+              href={href}
               className="group flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between rounded-2xl border border-[#ebdcb9]/60 bg-white/80 p-2 sm:px-4 sm:py-3 shadow-[0_8px_30px_rgba(7,22,20,0.02)] backdrop-blur-md gap-1.5 sm:gap-2 transition hover:border-[#d6b25e] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
             >
               <div className="text-center sm:text-right">
