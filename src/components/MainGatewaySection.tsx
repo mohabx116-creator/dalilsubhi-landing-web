@@ -63,7 +63,7 @@ export default function MainGatewaySection() {
   ];
 
   return (
-    <section className="relative z-10 overflow-hidden bg-gradient-to-b from-[#fdfbf7] via-[#faf8f2] to-[#f6f9f8] py-12 sm:py-24">
+    <section id="ecosystem" className="relative z-10 overflow-hidden bg-gradient-to-b from-[#fdfbf7] via-[#faf8f2] to-[#f6f9f8] py-12 sm:py-24">
       <div className="pointer-events-none absolute left-0 top-0 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d6b25e]/10 blur-[100px]" />
       <div className="pointer-events-none absolute right-0 bottom-0 h-80 w-80 translate-x-1/3 translate-y-1/3 rounded-full bg-[#0fa37f]/10 blur-[100px]" />
 
@@ -90,9 +90,15 @@ export default function MainGatewaySection() {
 
               <div className="mb-5 sm:mb-8 flex flex-wrap gap-1.5 sm:gap-2">
                 {communityCard.tags.map((tag) => (
-                  <span key={tag} className="inline-flex rounded-full border border-[#0fa37f]/20 bg-[#0fa37f]/5 px-2.5 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm font-bold text-[#0fa37f]">
+                  <a 
+                    key={tag} 
+                    href={communityCard.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full border border-[#0fa37f]/20 bg-[#0fa37f]/5 px-2.5 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm font-bold text-[#0fa37f] transition hover:bg-[#0fa37f]/10"
+                  >
                     {tag}
-                  </span>
+                  </a>
                 ))}
               </div>
 
@@ -113,13 +119,15 @@ export default function MainGatewaySection() {
                 <div className="h-1.5 w-1.5 rounded-full bg-[#ffbd2e]" />
                 <div className="h-1.5 w-1.5 rounded-full bg-[#27c93f]" />
               </div>
-              <img
-                src={communityCard.screenshot}
-                alt={communityCard.alt}
-                className="w-full object-cover object-top transition duration-500 group-hover:scale-[1.02] h-40 sm:h-64 lg:h-72"
-                decoding="async"
-                loading="lazy"
-              />
+              <a href={communityCard.link} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0fa37f]">
+                <img
+                  src={communityCard.screenshot}
+                  alt={communityCard.alt}
+                  className="w-full object-cover object-top transition duration-500 group-hover:scale-[1.02] h-40 sm:h-64 lg:h-72"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 
@@ -136,9 +144,15 @@ export default function MainGatewaySection() {
 
               <div className="mb-4 flex flex-wrap gap-1.5 sm:gap-2">
                 {card.tags.map((tag) => (
-                  <span key={tag} className="inline-flex rounded-full border border-gray-100 bg-gray-50 px-2 py-0.5 text-[10px] sm:px-2.5 sm:py-1 sm:text-xs font-bold text-gray-600 transition group-hover:border-gray-200 group-hover:bg-white">
+                  <a 
+                    key={tag} 
+                    href={card.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full border border-gray-100 bg-gray-50 px-2 py-0.5 text-[10px] sm:px-2.5 sm:py-1 sm:text-xs font-bold text-gray-600 transition hover:border-gray-300 hover:bg-white hover:text-gray-900 group-hover:border-gray-200 group-hover:bg-white"
+                  >
                     {tag}
-                  </span>
+                  </a>
                 ))}
               </div>
 
@@ -148,13 +162,15 @@ export default function MainGatewaySection() {
                   <div className="h-1.5 w-1.5 rounded-full bg-[#ffbd2e]" />
                   <div className="h-1.5 w-1.5 rounded-full bg-[#27c93f]" />
                 </div>
-                <img
-                  src={card.screenshot}
-                  alt={card.alt}
-                  className="w-full object-cover object-top transition duration-500 group-hover:scale-[1.02] h-32 sm:h-44 md:h-48"
-                  decoding="async"
-                  loading="lazy"
-                />
+                <a href={card.link} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400">
+                  <img
+                    src={card.screenshot}
+                    alt={card.alt}
+                    className="w-full object-cover object-top transition duration-500 group-hover:scale-[1.02] h-32 sm:h-44 md:h-48"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </a>
               </div>
 
               <a
