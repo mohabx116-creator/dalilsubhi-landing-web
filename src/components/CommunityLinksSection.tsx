@@ -1,4 +1,4 @@
-import { MessageCircle, Map } from 'lucide-react';
+import { MessageCircle, Map, ArrowLeft } from 'lucide-react';
 import { FACEBOOK_GROUP_URL, WHATSAPP_GROUP_URL, COMMUNITY_HUB_URL } from '../lib/config/links';
 
 export default function CommunityLinksSection() {
@@ -8,12 +8,22 @@ export default function CommunityLinksSection() {
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mb-6 text-2xl font-black text-[#071614] sm:text-3xl">روابط التواصل</h2>
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-          <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm sm:px-8 sm:py-4 sm:text-lg font-bold text-white shadow-lg shadow-[#25D366]/30 transition hover:bg-[#128C7E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]">
-            <MessageCircle size={20} className="sm:w-6 sm:h-6" />
+          <a 
+            href={WHATSAPP_GROUP_URL} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex min-h-[48px] sm:min-h-[52px] items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-white shadow-md shadow-[#25D366]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#128C7E] hover:shadow-lg hover:shadow-[#25D366]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]"
+          >
+            <MessageCircle size={20} className="sm:w-5 sm:h-5" />
             خدمة العملاء
           </a>
-          <a href={FACEBOOK_GROUP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-5 py-2.5 text-sm sm:px-8 sm:py-4 sm:text-lg font-bold text-white shadow-lg shadow-[#1877F2]/30 transition hover:bg-[#0c5bce] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1877F2]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="sm:w-6 sm:h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+          <a 
+            href={FACEBOOK_GROUP_URL} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex min-h-[48px] sm:min-h-[52px] items-center gap-2 rounded-xl bg-[#1877F2] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-white shadow-md shadow-[#1877F2]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0c5bce] hover:shadow-lg hover:shadow-[#1877F2]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1877F2]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="sm:w-5 sm:h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
             جروب الفيس بوك
           </a>
         </div>
@@ -30,9 +40,10 @@ export default function CommunityLinksSection() {
             href={COMMUNITY_HUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#071614] px-8 py-4 text-base font-bold text-white shadow-lg shadow-[#071614]/20 transition hover:bg-[#0a2420] hover:shadow-[#071614]/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#071614]"
+            className="group inline-flex min-h-[48px] sm:min-h-[52px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#071614] to-[#122824] px-8 py-4 text-sm sm:text-base font-bold text-white shadow-md shadow-[#071614]/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#071614]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#071614]"
           >
             استكشف البوابة المجتمعية
+            <ArrowLeft size={18} className="transition-transform duration-300 group-hover:-translate-x-1" />
           </a>
         </div>
       </div>

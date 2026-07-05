@@ -60,13 +60,13 @@ export default function HeroSection() {
             <a
               key={label}
               href={href}
-              className="group flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between rounded-2xl border border-[#ebdcb9]/60 bg-white/80 p-2 sm:px-4 sm:py-3 shadow-[0_8px_30px_rgba(7,22,20,0.02)] backdrop-blur-md gap-1.5 sm:gap-2 transition hover:border-[#d6b25e] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
+              className="group flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between rounded-xl border border-[#ebdcb9]/40 bg-white/60 p-2 sm:px-4 sm:py-3 shadow-[0_4px_20px_rgba(7,22,20,0.01)] backdrop-blur-md gap-1.5 sm:gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d6b25e] hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
             >
               <div className="text-center sm:text-right">
                 <p className="text-[9px] font-bold text-[#8c7a52] sm:text-[10px] hidden sm:block">القسم</p>
                 <p className="text-xs sm:text-sm font-black text-[#071614]">{label}</p>
               </div>
-              <span className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-neutral-50 ${tone} shadow-sm border border-neutral-100 transition group-hover:scale-110`}>
+              <span className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-white border border-gray-100 ${tone} shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ebdcb9]/15 group-hover:border-[#ebdcb9]/30`}>
                 <Icon className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
               </span>
             </a>

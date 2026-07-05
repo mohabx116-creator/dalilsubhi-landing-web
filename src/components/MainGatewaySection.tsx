@@ -11,7 +11,7 @@ export default function MainGatewaySection() {
     colorClass: 'border-[#0fa37f]/30 hover:shadow-[0_20px_40px_rgba(15,163,127,0.12)]',
     gradientClass: 'via-[#0fa37f]/60',
     iconBgClass: 'bg-[#0fa37f]/10 group-hover:bg-[#0fa37f]/20',
-    btnClass: 'bg-gradient-to-r from-[#0fa37f] to-[#0c8a6b] text-white shadow-md shadow-[#0fa37f]/20 hover:shadow-lg hover:shadow-[#0fa37f]/30 focus-visible:outline-[#0fa37f]',
+    btnClass: 'bg-gradient-to-r from-[#0fa37f] to-[#0a8a6b] text-white shadow-sm shadow-[#0fa37f]/10 transition-all duration-300 group-hover:shadow-md group-hover:shadow-[#0fa37f]/20 group-hover:-translate-y-0.5 focus-visible:outline-[#0fa37f]',
     tags: ['ابن حميدو', 'الشامي السوري', 'كش ملك', 'كشري هند', 'أرقام الطوارئ', 'إرشادات عامة'],
     screenshot: '/landing-previews/community.png',
     alt: 'لقطة من البوابة المجتمعية في دليل السبحي'
@@ -27,7 +27,7 @@ export default function MainGatewaySection() {
       colorClass: 'border-[#2c3a30]/20 hover:shadow-[0_20px_40px_rgba(44,58,48,0.08)]',
       gradientClass: 'via-[#2c3a30]/60',
       iconBgClass: 'bg-[#2c3a30]/10 group-hover:bg-[#2c3a30]/20',
-      btnClass: 'bg-gradient-to-r from-[#2c3a30] to-[#1e2821] text-white shadow-md shadow-[#2c3a30]/20 hover:shadow-lg hover:shadow-[#2c3a30]/30 focus-visible:outline-[#2c3a30]',
+      btnClass: 'bg-[#2c3a30]/5 text-[#2c3a30] border border-[#2c3a30]/10 group-hover:bg-[#2c3a30] group-hover:text-white group-hover:border-[#2c3a30] group-hover:shadow-sm focus-visible:outline-[#2c3a30]',
       tags: ['وحدات للبيع', 'تفاصيل منظمة', 'تواصل مباشر'],
       screenshot: '/landing-previews/realestate.png',
       alt: 'لقطة من صفحة العقارات في دليل السبحي'
@@ -41,7 +41,7 @@ export default function MainGatewaySection() {
       colorClass: 'border-[#d6b25e]/30 hover:shadow-[0_20px_40px_rgba(214,178,94,0.12)]',
       gradientClass: 'via-[#d6b25e]/60',
       iconBgClass: 'bg-[#d6b25e]/10 group-hover:bg-[#d6b25e]/20',
-      btnClass: 'bg-gradient-to-r from-[#d6b25e] to-[#cda44b] text-[#071614] shadow-md shadow-[#d6b25e]/20 hover:shadow-lg hover:shadow-[#d6b25e]/30 focus-visible:outline-[#d6b25e]',
+      btnClass: 'bg-[#d6b25e]/10 text-[#8a6d22] border border-[#d6b25e]/15 group-hover:bg-[#d6b25e] group-hover:text-[#071614] group-hover:border-[#d6b25e] group-hover:shadow-sm focus-visible:outline-[#d6b25e]',
       tags: ['سكن وإقامات', 'تفاصيل واضحة', 'خيارات منظمة'],
       screenshot: '/landing-previews/rentals.png',
       alt: 'لقطة من صفحة الإيجارات في دليل السبحي'
@@ -55,7 +55,7 @@ export default function MainGatewaySection() {
       colorClass: 'border-[#0fa37f]/20 hover:shadow-[0_20px_40px_rgba(15,163,127,0.08)]',
       gradientClass: 'via-[#0fa37f]/60',
       iconBgClass: 'bg-[#0fa37f]/10 group-hover:bg-[#0fa37f]/20',
-      btnClass: 'bg-gradient-to-r from-[#0fa37f] to-[#0c8a6b] text-white shadow-md shadow-[#0fa37f]/20 hover:shadow-lg hover:shadow-[#0fa37f]/30 focus-visible:outline-[#0fa37f]',
+      btnClass: 'bg-[#0fa37f]/5 text-[#0fa37f] border border-[#0fa37f]/10 group-hover:bg-[#0fa37f] group-hover:text-white group-hover:border-[#0fa37f] group-hover:shadow-sm focus-visible:outline-[#0fa37f]',
       tags: ['خدمات منزلية', 'مرافق', 'روابط مهمة', 'تصنيفات منظمة'],
       screenshot: '/landing-previews/services.png',
       alt: 'لقطة من دليل الخدمات في دليل السبحي'
@@ -106,10 +106,10 @@ export default function MainGatewaySection() {
               </div>
 
               <span
-                className={`inline-flex min-h-11 sm:min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-2 text-sm sm:text-lg font-bold shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${communityCard.btnClass}`}
+                className={`inline-flex min-h-11 sm:min-h-12 items-center justify-center gap-2 rounded-xl px-5 py-2 text-sm font-bold transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${communityCard.btnClass}`}
               >
                 {communityCard.cta}
-                <ArrowLeft size={18} />
+                <ArrowLeft size={18} className="transition-transform duration-300 group-hover:-translate-x-1" />
               </span>
             </div>
 
@@ -184,10 +184,10 @@ export default function MainGatewaySection() {
                 </div>
 
                 <span
-                  className={`mt-auto inline-flex min-h-11 sm:min-h-14 items-center justify-center gap-2 rounded-2xl px-5 text-sm sm:text-base font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${card.btnClass}`}
+                  className={`mt-auto inline-flex min-h-10 sm:min-h-11 items-center justify-center gap-2 rounded-xl px-5 text-xs sm:text-sm font-bold transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${card.btnClass}`}
                 >
                   {card.cta}
-                  <ArrowLeft size={16} />
+                  <ArrowLeft size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
                 </span>
               </a>
             );
@@ -197,7 +197,7 @@ export default function MainGatewaySection() {
         <div className="mt-12 flex flex-wrap justify-center gap-3 sm:mt-16 sm:gap-4">
           <a
             href={OWNERS_URL}
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-5 py-2.5 text-sm font-bold text-gray-600 shadow-sm backdrop-blur-sm transition hover:border-[#d6b25e] hover:bg-white hover:text-[#071614] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6b25e]"
+            className="inline-flex min-h-[46px] items-center gap-2 rounded-xl border border-[#ebdcb9]/60 bg-white/90 px-6 py-2.5 text-sm font-bold text-[#5d4c18] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d6b25e] hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
           >
             <Megaphone size={16} className="text-[#d6b25e]" />
             أعلن عن وحدتك
@@ -206,7 +206,7 @@ export default function MainGatewaySection() {
             href={WHATSAPP_GROUP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-5 py-2.5 text-sm font-bold text-gray-600 shadow-sm backdrop-blur-sm transition hover:border-[#25D366] hover:bg-white hover:text-[#071614] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]"
+            className="inline-flex min-h-[46px] items-center gap-2 rounded-xl border border-[#25D366]/20 bg-white/90 px-6 py-2.5 text-sm font-bold text-[#128C7E] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#25D366] hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
           >
             <MessageCircle size={16} className="text-[#25D366]" />
             خدمة العملاء
@@ -215,7 +215,7 @@ export default function MainGatewaySection() {
             href={FACEBOOK_GROUP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-5 py-2.5 text-sm font-bold text-gray-600 shadow-sm backdrop-blur-sm transition hover:border-[#1877F2] hover:bg-white hover:text-[#071614] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1877F2]"
+            className="inline-flex min-h-[46px] items-center gap-2 rounded-xl border border-[#1877F2]/20 bg-white/90 px-6 py-2.5 text-sm font-bold text-[#0c5bce] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#1877F2] hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1877F2]"
           >
             <Users size={16} className="text-[#1877F2]" />
             جروب الفيس بوك
