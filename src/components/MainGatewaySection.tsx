@@ -342,17 +342,19 @@ function RealEstateMockup() {
 }
 
 function GatewayMockup({ kind }: { kind: 'community' | 'services' | 'rentals' | 'realEstate' }) {
-  switch (kind) {
-    case 'community':
-      return <CommunityMockup />;
-    case 'services':
-      return <ServicesMockup />;
-    case 'rentals':
-      return <RentalsMockup />;
-    case 'realEstate':
-    default:
-      return <RealEstateMockup />;
-  }
+  return (
+    <div className="h-[340px] sm:h-[380px]">
+      {kind === 'community' ? (
+        <CommunityMockup />
+      ) : kind === 'services' ? (
+        <ServicesMockup />
+      ) : kind === 'rentals' ? (
+        <RentalsMockup />
+      ) : (
+        <RealEstateMockup />
+      )}
+    </div>
+  );
 }
 
 export default function MainGatewaySection() {
@@ -463,7 +465,7 @@ export default function MainGatewaySection() {
               </span>
             </div>
 
-            <div className="mt-6 lg:mt-0 flex-1">
+            <div className="mt-6 flex flex-1 items-stretch lg:mt-0">
               <GatewayMockup kind={communityCard.mockup} />
             </div>
           </a>
@@ -484,26 +486,28 @@ export default function MainGatewaySection() {
                 className={`group flex h-full flex-col overflow-hidden rounded-[24px] sm:rounded-[30px] border bg-white/95 p-5 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] backdrop-blur-md transition ${card.colorClass} lg:col-span-1 scroll-mt-24 md:scroll-mt-32 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6b25e]`}
               >
                 <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100 ${card.gradientClass}`} />
-                <div className={`mb-4 flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-2xl transition duration-300 ${card.iconBgClass}`}>
-                  {card.icon}
-                </div>
-                <h3 className="mb-2 text-lg font-black text-[#071614] sm:text-2xl">{card.title}</h3>
-                <p className="mb-4 text-xs sm:text-base leading-relaxed text-gray-600">
-                  {card.text}
-                </p>
+                <div className="flex min-h-[172px] flex-col">
+                  <div className={`mb-4 flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-2xl transition duration-300 ${card.iconBgClass}`}>
+                    {card.icon}
+                  </div>
+                  <h3 className="mb-2 text-lg font-black text-[#071614] sm:text-2xl">{card.title}</h3>
+                  <p className="mb-4 text-xs sm:text-base leading-relaxed text-gray-600">
+                    {card.text}
+                  </p>
 
-                <div className="mb-4 flex flex-wrap gap-1.5 sm:gap-2">
-                  {card.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="inline-flex rounded-full border border-gray-100 bg-gray-50 px-2 py-0.5 text-[10px] sm:px-2.5 sm:py-1 sm:text-xs font-bold text-gray-600 transition hover:border-gray-300 hover:bg-white hover:text-gray-900 group-hover:border-gray-200 group-hover:bg-white"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  <div className="mb-4 flex flex-wrap gap-1.5 sm:gap-2">
+                    {card.tags.map((tag) => (
+                      <span 
+                        key={tag} 
+                        className="inline-flex rounded-full border border-gray-100 bg-gray-50 px-2 py-0.5 text-[10px] sm:px-2.5 sm:py-1 sm:text-xs font-bold text-gray-600 transition hover:border-gray-300 hover:bg-white hover:text-gray-900 group-hover:border-gray-200 group-hover:bg-white"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="mb-5 flex flex-1">
+                <div className="mb-5 flex flex-1 items-stretch">
                   <GatewayMockup kind={card.mockup} />
                 </div>
 
