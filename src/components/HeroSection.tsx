@@ -6,8 +6,8 @@ export default function HeroSection() {
   const highlights = [
     { label: 'البوابة المجتمعية', icon: Map, tone: 'text-[#0fa37f]', href: '#community' },
     { label: 'الخدمات', icon: Wrench, tone: 'text-[#0fa37f]', href: '#services' },
-    { label: 'الإيجارات', icon: Home, tone: 'text-[#d6b25e]', href: '#rentals' },
-    { label: 'العقارات', icon: Building2, tone: 'text-[#8a6d22]', href: '#realestate' },
+    { label: 'الإيجارات', icon: Home, tone: 'text-[#d6b25e]', href: '#rentals-card' },
+    { label: 'العقارات', icon: Building2, tone: 'text-[#8a6d22]', href: '#realestate-card' },
   ] as const;
 
   return (
