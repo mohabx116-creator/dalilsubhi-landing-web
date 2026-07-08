@@ -40,7 +40,7 @@ export default function CommunityLinksSection() {
             href={COMMUNITY_HUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex min-h-[48px] sm:min-h-[52px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#071614] to-[#122824] px-8 py-4 text-sm sm:text-base font-bold text-white shadow-md shadow-[#071614]/15 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#071614]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#071614]"
+            className="group inline-flex min-h-[48px] sm:min-h-[52px] items-center justify-center gap-2 rounded-xl border border-[#0fa37f]/25 bg-white px-8 py-4 text-sm sm:text-base font-bold text-[#123b35] shadow-[0_10px_30px_rgba(15,163,127,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0f3b35] hover:bg-[#0f3b35] hover:text-white hover:shadow-[0_16px_34px_rgba(15,59,53,0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0f3b35]"
           >
             استكشف البوابة المجتمعية
             <ArrowLeft size={18} className="transition-transform duration-300 group-hover:-translate-x-1" />
