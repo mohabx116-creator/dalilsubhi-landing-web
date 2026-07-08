@@ -81,7 +81,7 @@ export default function MainGatewaySection() {
             href={communityCard.link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group flex h-full flex-col overflow-hidden rounded-[24px] sm:rounded-[30px] border bg-white/95 p-5 sm:p-8 md:p-10 shadow-lg backdrop-blur-md transition ${communityCard.colorClass} lg:col-span-3 lg:flex-row lg:items-center lg:gap-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]`}
+            className={`group flex h-full flex-col overflow-hidden rounded-[24px] sm:rounded-[30px] border bg-white/95 p-5 sm:p-8 md:p-10 shadow-lg backdrop-blur-md transition ${communityCard.colorClass} lg:col-span-3 lg:flex-row lg:items-center lg:gap-10 scroll-mt-24 md:scroll-mt-32 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0fa37f]`}
           >
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100 ${communityCard.gradientClass}" />
 
@@ -144,7 +144,7 @@ export default function MainGatewaySection() {
                 href={card.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex h-full flex-col overflow-hidden rounded-[24px] sm:rounded-[30px] border bg-white/95 p-5 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] backdrop-blur-md transition ${card.colorClass} lg:col-span-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6b25e]`}
+                className={`group flex h-full flex-col overflow-hidden rounded-[24px] sm:rounded-[30px] border bg-white/95 p-5 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] backdrop-blur-md transition ${card.colorClass} lg:col-span-1 scroll-mt-24 md:scroll-mt-32 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6b25e]`}
               >
                 <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100 ${card.gradientClass}`} />
                 <div className={`mb-4 flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-2xl transition duration-300 ${card.iconBgClass}`}>

@@ -23,7 +23,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="bg-gray-50/50 py-12 sm:py-20 backdrop-blur-[4px]">
+    <section id="services" className="bg-gray-50/50 py-12 sm:py-20 scroll-mt-24 md:scroll-mt-32 backdrop-blur-[4px]">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-2xl font-black text-[#071614] sm:text-4xl">محتوى الدليل</h2>
         <div className="mt-8 grid gap-5 text-right sm:grid-cols-3 sm:gap-8">

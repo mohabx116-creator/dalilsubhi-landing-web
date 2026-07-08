@@ -3,7 +3,7 @@ import { FACEBOOK_GROUP_URL, WHATSAPP_GROUP_URL, COMMUNITY_HUB_URL } from '../li
 
 export default function CommunityLinksSection() {
   return (
-    <section id="community" className="bg-white/50 py-10 sm:py-16 backdrop-blur-[4px]">
+    <section id="community" className="bg-white/50 py-10 sm:py-16 scroll-mt-24 md:scroll-mt-32 backdrop-blur-[4px]">
       <div id="contact" className="scroll-mt-20" />
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mb-6 text-2xl font-black text-[#071614] sm:text-3xl">روابط التواصل</h2>
