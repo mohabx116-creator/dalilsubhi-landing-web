@@ -23,12 +23,12 @@ function MockupShell({
 }) {
   return (
     <div
-      className={`relative overflow-hidden ${featured ? 'rounded-[30px] sm:rounded-[32px]' : 'rounded-[26px] sm:rounded-[28px]'} border ${toneClass} bg-gradient-to-br ${surfaceClass} p-4 shadow-[0_24px_70px_rgba(17,70,58,0.10)] sm:p-5`}
+      className={`relative flex h-full min-h-[340px] flex-col overflow-hidden ${featured ? 'rounded-[30px] sm:rounded-[32px]' : 'rounded-[26px] sm:rounded-[28px]'} border ${toneClass} bg-gradient-to-br ${surfaceClass} p-4 shadow-[0_24px_70px_rgba(17,70,58,0.10)] sm:min-h-[380px] sm:p-5`}
     >
       <div className={`pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full blur-3xl ${glowClass}`} />
       <div className="pointer-events-none absolute -left-8 bottom-0 h-28 w-28 rounded-full bg-white/40 blur-3xl" />
-      <div className="relative">
-        <div className="mb-3 flex items-center justify-between">
+      <div className="relative flex flex-1 flex-col">
+        <div className="mb-3 flex shrink-0 items-center justify-between">
           <div className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ef6b5a]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#f6c85f]" />
@@ -36,7 +36,9 @@ function MockupShell({
           </div>
           <div className="h-1.5 w-20 rounded-full bg-black/5" />
         </div>
-        {children}
+        <div className="flex flex-1 flex-col">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -60,7 +62,7 @@ function CommunityMockup() {
       surfaceClass="from-[#ffffff] via-[#fbfffc] to-[#effaf5]"
       glowClass="bg-[#0fa37f]/12"
     >
-      <div className="space-y-3 sm:space-y-4">
+      <div className="flex h-full flex-col space-y-3 sm:space-y-4">
         <div className="flex items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#e3eee8] bg-white/90 px-3 py-1.5 shadow-sm">
             <Search size={13} className="text-[#0fa37f]" />
@@ -103,7 +105,7 @@ function CommunityMockup() {
           ))}
         </div>
 
-        <div className="rounded-3xl border border-[#dcefe5] bg-gradient-to-br from-[#f7fcf8] via-white to-[#eef8f1] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+        <div className="flex-1 rounded-3xl border border-[#dcefe5] bg-gradient-to-br from-[#f7fcf8] via-white to-[#eef8f1] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
           <div className="mb-3 flex items-center justify-between">
             <div className="h-2.5 w-24 rounded-full bg-slate-200/80" />
             <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[10px] font-bold text-[#0f3b35] shadow-sm">
@@ -159,7 +161,7 @@ function ServicesMockup() {
       surfaceClass="from-[#ffffff] via-[#f8fdfb] to-[#eff7f3]"
       glowClass="bg-[#0fa37f]/12"
     >
-      <div className="space-y-3">
+      <div className="flex h-full flex-col space-y-3">
         <div className="flex items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#dbe8e1] bg-white/90 px-3 py-1.5 shadow-sm">
             <Sparkles size={13} className="text-[#0fa37f]" />
@@ -171,7 +173,7 @@ function ServicesMockup() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid flex-1 grid-cols-2 gap-2">
           {services.map((service) => (
             <div key={service.title} className="rounded-2xl border border-white/80 bg-white/85 p-3 shadow-sm">
               <div className={`mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl ${service.tone}`}>
@@ -213,7 +215,7 @@ function RentalsMockup() {
       surfaceClass="from-[#fffefb] via-[#fff9ef] to-[#f8f2e5]"
       glowClass="bg-[#d6b25e]/16"
     >
-      <div className="space-y-3">
+      <div className="flex h-full flex-col space-y-3">
         <div className="flex flex-wrap gap-2">
           <span className="inline-flex h-8 items-center gap-2 rounded-full border border-[#ead9b1] bg-[#fffaf0] px-3 shadow-sm">
             <Home size={12} className="text-[#8a6d22]" />
@@ -229,7 +231,7 @@ function RentalsMockup() {
           </span>
         </div>
 
-        <div className="grid gap-2 sm:grid-cols-[1.2fr_0.8fr]">
+        <div className="grid flex-1 gap-2 sm:grid-cols-[1.2fr_0.8fr]">
           <div className="rounded-3xl border border-white/80 bg-white/90 p-3 shadow-[0_12px_30px_rgba(138,109,34,0.07)]">
             <div className="mb-3 flex items-center gap-3">
               <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-[#f4e8c8] via-[#fffaf0] to-[#e9f4ec]" />
@@ -279,7 +281,7 @@ function RealEstateMockup() {
       surfaceClass="from-[#ffffff] via-[#f8faf6] to-[#edf2eb]"
       glowClass="bg-[#2c3a30]/12"
     >
-      <div className="space-y-3">
+      <div className="flex h-full flex-col space-y-3">
         <div className="flex items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#e2eadf] bg-white/90 px-3 py-1.5 shadow-sm">
             <Building2 size={13} className="text-[#2c3a30]" />
@@ -291,7 +293,7 @@ function RealEstateMockup() {
           </div>
         </div>
 
-        <div className="grid gap-2 sm:grid-cols-[0.95fr_1.05fr]">
+        <div className="grid flex-1 gap-2 sm:grid-cols-[0.95fr_1.05fr]">
           <div className="rounded-3xl border border-white/80 bg-white/90 p-3 shadow-sm">
             <div className="mb-3 h-20 rounded-2xl bg-gradient-to-br from-[#eef3ea] via-[#fbfcfa] to-[#e5eadf]" />
             <div className="mb-2 flex items-center justify-between">
@@ -501,7 +503,7 @@ export default function MainGatewaySection() {
                   ))}
                 </div>
 
-                <div className="mb-5">
+                <div className="mb-5 flex flex-1">
                   <GatewayMockup kind={card.mockup} />
                 </div>
 
