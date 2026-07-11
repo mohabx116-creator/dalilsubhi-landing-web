@@ -49,6 +49,17 @@ function MockupBar({ className = '' }: { className?: string }) {
 }
 
 function CommunityMockup() {
+  return (
+    <div className="relative h-full overflow-hidden rounded-[32px] border border-[#dbeee6] bg-white shadow-[0_18px_50px_rgba(17,70,58,0.08)]">
+      <img
+        src="/landing-previews/community-gateway.png"
+        alt="البوابة المجتمعية في دليل السبحي"
+        className="h-full w-full object-cover object-center"
+        loading="eager"
+      />
+    </div>
+  );
+
   const cards: MockupCard[] = [
     { title: 'support', icon: <HeartPulse size={14} />, tone: 'bg-[#0fa37f]/10 text-[#0fa37f]' },
     { title: 'food', icon: <UtensilsCrossed size={14} />, tone: 'bg-[#d6b25e]/12 text-[#8a6d22]' },
@@ -209,6 +220,30 @@ function ServicesMockup() {
 }
 
 function RentalsMockup() {
+  return (
+    <MockupShell
+      featured
+      toneClass="border-[#ead9b1]"
+      surfaceClass="from-[#fffefb] via-[#fff9ef] to-[#f8f2e5]"
+      glowClass="bg-[#d6b25e]/16"
+    >
+      <div className="relative h-full overflow-hidden rounded-[26px] border border-[#d8c79c] bg-[#f8f5ec] p-2 shadow-[0_18px_50px_rgba(138,109,34,0.10)] sm:rounded-[30px] sm:p-3">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/10" />
+        <img
+          src="/landing-previews/rentals-gateway.png"
+          alt="قسم الإيجارات في دليل السبحي"
+          className="h-full w-full rounded-[22px] object-cover object-center shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] sm:rounded-[26px]"
+          loading="eager"
+        />
+        <div className="pointer-events-none absolute inset-0 rounded-[26px] ring-1 ring-inset ring-white/35 sm:rounded-[30px]" />
+        <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold text-[#6a5421] shadow-sm backdrop-blur">
+          <BadgeCheck size={11} className="text-[#b08c35]" />
+          <span>الإيجارات</span>
+        </div>
+      </div>
+    </MockupShell>
+  );
+
   return (
     <MockupShell
       toneClass="border-[#ead9b1]"
