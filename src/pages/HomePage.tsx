@@ -6,6 +6,7 @@ import ServicesSection from '../components/ServicesSection';
 import FacilitiesSection from '../components/FacilitiesSection';
 import CommunityLinksSection from '../components/CommunityLinksSection';
 import AboutSection from '../components/AboutSection';
+import AnimatedPlatformSection from '../components/AnimatedPlatformSection';
 import Footer from '../components/Footer';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
 import { OWNERS_URL } from '../lib/config/links';
@@ -48,6 +49,7 @@ export default function HomePage() {
             </div>
           </section>
           <MainGatewaySection />
+          <AnimatedPlatformSection />
           <ServicesSection />
           <FacilitiesSection />
           <CommunityLinksSection />
