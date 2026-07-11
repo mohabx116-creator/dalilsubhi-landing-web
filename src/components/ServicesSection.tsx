@@ -1,3 +1,4 @@
+import servicesPreview from '../assets/services-preview.png';
 import { Home, ShieldCheck, Users } from 'lucide-react';
 
 export default function ServicesSection() {
@@ -25,6 +26,18 @@ export default function ServicesSection() {
   return (
     <section id="services" className="bg-gray-50/50 py-12 sm:py-20 scroll-mt-24 md:scroll-mt-32 backdrop-blur-[4px]">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto mb-8 max-w-5xl overflow-hidden rounded-[28px] border border-[#e5efe8] bg-white shadow-[0_20px_55px_rgba(7,22,20,0.06)] sm:mb-10">
+          <div className="relative">
+            <img
+              src={servicesPreview}
+              alt="معاينة قسم الخدمات"
+              className="h-auto w-full object-cover"
+              loading="eager"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/0 via-white/0 to-white/10" />
+          </div>
+        </div>
+
         <h2 className="text-2xl font-black text-[#071614] sm:text-4xl">محتوى الدليل</h2>
         <div className="mt-8 grid gap-5 text-right sm:grid-cols-3 sm:gap-8">
           {cards.map((card) => (
