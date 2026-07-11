@@ -145,6 +145,86 @@ function CommunityMockup() {
                   <MockupBar className="mb-2 w-2/3" />
                   <MockupBar className="w-1/2" />
                 </div>
+
+  return (
+    <MockupShell
+      featured
+      toneClass="border-[#d7efe7]"
+      surfaceClass="from-[#ffffff] via-[#fbfffc] to-[#effaf5]"
+      glowClass="bg-[#0fa37f]/12"
+    >
+      <div className="flex h-full flex-col space-y-3 sm:space-y-4">
+        <div className="flex items-center justify-between gap-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#e3eee8] bg-white/90 px-3 py-1.5 shadow-sm">
+            <Search size={13} className="text-[#0fa37f]" />
+            <div className="h-2.5 w-24 rounded-full bg-slate-200/80 sm:w-40" />
+          </div>
+          <div className="hidden items-center gap-2 rounded-full border border-[#0fa37f]/15 bg-white/90 px-3 py-1.5 text-[10px] font-bold text-[#0f3b35] shadow-sm sm:inline-flex">
+            <MapPin size={11} className="text-[#0fa37f]" />
+            <span>محيط حي</span>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          {['h-8 w-20', 'h-8 w-24', 'h-8 w-16', 'h-8 w-18'].map((chip, index) => (
+            <span
+              key={chip}
+              className={`inline-flex items-center gap-2 rounded-full border px-3 ${index === 1 ? 'border-[#d6b25e]/18 bg-[#fffaf0]' : 'border-[#d8e8e1] bg-white/80'} shadow-sm`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${index === 1 ? 'bg-[#d6b25e]' : 'bg-[#0fa37f]'}`} />
+              <span className={`rounded-full bg-black/10 ${chip}`} />
+            </span>
+          ))}
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-3">
+          {cards.map((card) => (
+            <div
+              key={card.title}
+              className="rounded-2xl border border-white/80 bg-white/85 p-3 shadow-[0_12px_24px_rgba(17,70,58,0.06)]"
+            >
+              <div className={`mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl ${card.tone}`}>
+                {card.icon}
+              </div>
+              <MockupBar className="mb-2 w-3/4" />
+              <MockupBar className="mb-3 w-1/2" />
+              <div className="flex items-center justify-between">
+                <span className="h-2.5 w-14 rounded-full bg-[#0fa37f]/10" />
+                <span className="h-2.5 w-8 rounded-full bg-[#d6b25e]/18" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex-1 rounded-3xl border border-[#dcefe5] bg-gradient-to-br from-[#f7fcf8] via-white to-[#eef8f1] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+          <div className="mb-3 flex items-center justify-between">
+            <div className="h-2.5 w-24 rounded-full bg-slate-200/80" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[10px] font-bold text-[#0f3b35] shadow-sm">
+              <BadgeCheck size={11} className="text-[#0fa37f]" />
+              <span>جاهز</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            <div className="rounded-2xl border border-white/80 bg-white/80 p-2 shadow-sm">
+              <div className="mb-2 flex items-center gap-2">
+                <div className="h-7 w-7 rounded-xl bg-[#0fa37f]/10" />
+                <div className="flex-1">
+                  <MockupBar className="mb-1 w-2/3" />
+                  <MockupBar className="w-1/2" />
+                </div>
+              </div>
+              <div className="h-14 rounded-xl bg-gradient-to-br from-[#eaf8f1] to-white" />
+            </div>
+            <div className="col-span-3 rounded-2xl border border-dashed border-[#cfe7db] bg-white/70 p-3">
+              <div className="grid gap-2 sm:grid-cols-3">
+                <div className="rounded-2xl bg-white p-3 shadow-sm">
+                  <MockupBar className="mb-2 w-1/2" />
+                  <MockupBar className="w-3/4" />
+                </div>
+                <div className="rounded-2xl bg-white p-3 shadow-sm">
+                  <MockupBar className="mb-2 w-2/3" />
+                  <MockupBar className="w-1/2" />
+                </div>
                 <div className="rounded-2xl bg-white p-3 shadow-sm">
                   <MockupBar className="mb-2 w-1/2" />
                   <MockupBar className="w-2/3" />
@@ -159,60 +239,24 @@ function CommunityMockup() {
 }
 
 function ServicesMockup() {
-  const services: MockupCard[] = [
-    { title: 'service', icon: <Wrench size={14} />, tone: 'bg-[#0fa37f]/10 text-[#0fa37f]' },
-    { title: 'verified', icon: <BadgeCheck size={14} />, tone: 'bg-[#d6b25e]/12 text-[#8a6d22]' },
-    { title: 'community', icon: <Users size={14} />, tone: 'bg-[#eff5fb] text-[#3b6b8b]' },
-    { title: 'filter', icon: <Filter size={14} />, tone: 'bg-[#f1f4ef] text-[#4c5b4f]' },
-  ];
-
   return (
     <MockupShell
       toneClass="border-[#d8e8df]"
       surfaceClass="from-[#ffffff] via-[#f8fdfb] to-[#eff7f3]"
       glowClass="bg-[#0fa37f]/12"
     >
-      <div className="flex h-full flex-col space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#dbe8e1] bg-white/90 px-3 py-1.5 shadow-sm">
-            <Sparkles size={13} className="text-[#0fa37f]" />
-            <div className="h-2.5 w-20 rounded-full bg-slate-200/80" />
-          </div>
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#0fa37f]/10 px-3 py-1.5 text-[10px] font-bold text-[#0f3b35]">
-            <ShieldCheck size={11} className="text-[#0fa37f]" />
-            <span>موثوق</span>
-          </div>
-        </div>
-
-        <div className="grid flex-1 grid-cols-2 gap-2">
-          {services.map((service) => (
-            <div key={service.title} className="rounded-2xl border border-white/80 bg-white/85 p-3 shadow-sm">
-              <div className={`mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl ${service.tone}`}>
-                {service.icon}
-              </div>
-              <MockupBar className="mb-2 w-3/4" />
-              <MockupBar className="mb-3 w-1/2" />
-              <div className="flex gap-1.5">
-                <span className="h-2.5 w-8 rounded-full bg-black/10" />
-                <span className="h-2.5 w-12 rounded-full bg-[#0fa37f]/10" />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-3 gap-2">
-          <div className="rounded-2xl border border-[#dceee6] bg-[#f7fcf8] p-3">
-            <div className="mb-2 h-2.5 w-16 rounded-full bg-slate-200/80" />
-            <div className="h-14 rounded-xl bg-white shadow-sm" />
-          </div>
-          <div className="rounded-2xl border border-[#dceee6] bg-[#f7fcf8] p-3">
-            <div className="mb-2 h-2.5 w-20 rounded-full bg-slate-200/80" />
-            <div className="h-14 rounded-xl bg-white shadow-sm" />
-          </div>
-          <div className="rounded-2xl border border-[#dceee6] bg-[#f7fcf8] p-3">
-            <div className="mb-2 h-2.5 w-14 rounded-full bg-slate-200/80" />
-            <div className="h-14 rounded-xl bg-white shadow-sm" />
-          </div>
+      <div className="relative h-full overflow-hidden rounded-[26px] border border-[#dceee6] bg-[#f8fdfb] p-2 shadow-[0_18px_50px_rgba(15,163,127,0.08)] sm:rounded-[30px] sm:p-3">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/10" />
+        <img
+          src="/landing-previews/services-gateway.png"
+          alt="قسم الخدمات في دليل السبحي"
+          className="h-full w-full rounded-[22px] object-cover object-top shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] sm:rounded-[26px]"
+          loading="eager"
+        />
+        <div className="pointer-events-none absolute inset-0 rounded-[26px] ring-1 ring-inset ring-white/35 sm:rounded-[30px]" />
+        <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold text-[#0f3b35] shadow-sm backdrop-blur">
+          <Wrench size={11} className="text-[#0fa37f]" />
+          <span>الخدمات</span>
         </div>
       </div>
     </MockupShell>
