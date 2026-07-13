@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { ArrowLeft, BadgeCheck, Building, Building2, Filter, Home, Map, MapPin, Megaphone, MessageCircle, ShieldCheck, Users, Wrench } from 'lucide-react';
+import { ArrowLeft, BadgeCheck, Building, Building2, Home, Map, Megaphone, MessageCircle, Users, Wrench } from 'lucide-react';
 import { FACEBOOK_GROUP_URL, OWNERS_URL, REAL_ESTATE_URL, RENTALS_URL, SERVICES_URL, WHATSAPP_GROUP_URL, COMMUNITY_HUB_URL } from '../lib/config/links';
 
 function MockupShell({
@@ -38,9 +38,7 @@ function MockupShell({
   );
 }
 
-function MockupBar({ className = '' }: { className?: string }) {
-  return <div className={`h-2 rounded-full bg-black/10 ${className}`} />;
-}
+
 
 function CommunityMockup() {
   return (
@@ -104,70 +102,6 @@ function RentalsMockup() {
       </div>
     </MockupShell>
   );
-
-  return (
-    <MockupShell
-      toneClass="border-[#ead9b1]"
-      surfaceClass="from-[#fffefb] via-[#fff9ef] to-[#f8f2e5]"
-      glowClass="bg-[#d6b25e]/16"
-    >
-      <div className="flex h-full flex-col space-y-3">
-        <div className="flex flex-wrap gap-2">
-          <span className="inline-flex h-8 items-center gap-2 rounded-full border border-[#ead9b1] bg-[#fffaf0] px-3 shadow-sm">
-            <Home size={12} className="text-[#8a6d22]" />
-            <span className="h-2.5 w-14 rounded-full bg-black/10" />
-          </span>
-          <span className="inline-flex h-8 items-center gap-2 rounded-full border border-[#ead9b1]/70 bg-white/80 px-3 shadow-sm">
-            <Filter size={12} className="text-[#b08c35]" />
-            <span className="h-2.5 w-10 rounded-full bg-black/10" />
-          </span>
-          <span className="inline-flex h-8 items-center gap-2 rounded-full border border-[#ead9b1]/60 bg-white/80 px-3 shadow-sm">
-            <BadgeCheck size={12} className="text-[#b08c35]" />
-            <span className="h-2.5 w-12 rounded-full bg-black/10" />
-          </span>
-        </div>
-
-        <div className="grid flex-1 gap-2 sm:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-3xl border border-white/80 bg-white/90 p-3 shadow-[0_12px_30px_rgba(138,109,34,0.07)]">
-            <div className="mb-3 flex items-center gap-3">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-[#f4e8c8] via-[#fffaf0] to-[#e9f4ec]" />
-              <div className="flex-1">
-                <MockupBar className="mb-2 w-2/3" />
-                <MockupBar className="mb-2 w-1/2" />
-                <div className="flex items-center gap-2">
-                  <span className="h-2.5 w-12 rounded-full bg-[#d6b25e]/18" />
-                  <span className="h-2.5 w-16 rounded-full bg-[#0fa37f]/12" />
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              <div className="h-10 rounded-2xl bg-[#f7f3e8]" />
-              <div className="h-10 rounded-2xl bg-[#f8faf7]" />
-              <div className="h-10 rounded-2xl bg-[#f7f3e8]" />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <div className="rounded-2xl border border-white/80 bg-white/90 p-3 shadow-sm">
-              <div className="mb-2 flex items-center justify-between">
-                <MockupBar className="w-16" />
-                <span className="h-2.5 w-10 rounded-full bg-[#d6b25e]/18" />
-              </div>
-              <MockupBar className="mb-2 w-2/3" />
-              <MockupBar className="w-1/2" />
-            </div>
-            <div className="rounded-2xl border border-white/80 bg-white/90 p-3 shadow-sm">
-              <div className="mb-2 flex items-center justify-between">
-                <MockupBar className="w-12" />
-                <span className="h-2.5 w-12 rounded-full bg-[#0fa37f]/12" />
-              </div>
-              <MockupBar className="mb-2 w-3/4" />
-              <MockupBar className="w-1/2" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </MockupShell>
-  );
 }
 
 function RealEstateMockup() {
@@ -177,60 +111,18 @@ function RealEstateMockup() {
       surfaceClass="from-[#ffffff] via-[#f8faf6] to-[#edf2eb]"
       glowClass="bg-[#2c3a30]/12"
     >
-      <div className="flex h-full flex-col space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#e2eadf] bg-white/90 px-3 py-1.5 shadow-sm">
-            <Building2 size={13} className="text-[#2c3a30]" />
-            <div className="h-2.5 w-20 rounded-full bg-slate-200/80" />
-          </div>
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#2c3a30]/10 px-3 py-1.5 text-[10px] font-bold text-[#2c3a30]">
-            <MapPin size={11} />
-            <span>موقع</span>
-          </div>
-        </div>
-
-        <div className="grid flex-1 gap-2 sm:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-3xl border border-white/80 bg-white/90 p-3 shadow-sm">
-            <div className="mb-3 h-20 rounded-2xl bg-gradient-to-br from-[#eef3ea] via-[#fbfcfa] to-[#e5eadf]" />
-            <div className="mb-2 flex items-center justify-between">
-              <MockupBar className="w-24" />
-              <span className="h-2.5 w-10 rounded-full bg-[#2c3a30]/10" />
-            </div>
-            <MockupBar className="mb-2 w-3/4" />
-            <MockupBar className="w-1/2" />
-          </div>
-
-          <div className="space-y-2">
-            <div className="rounded-2xl border border-white/80 bg-white/90 p-3 shadow-sm">
-              <div className="mb-2 flex items-center justify-between">
-                <MockupBar className="w-16" />
-                <span className="h-2.5 w-14 rounded-full bg-[#d6b25e]/18" />
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="rounded-2xl bg-[#f4f7f2] p-2">
-                  <div className="mb-2 h-10 rounded-xl bg-white" />
-                  <MockupBar className="mb-2 w-3/4" />
-                  <MockupBar className="w-1/2" />
-                </div>
-                <div className="rounded-2xl bg-[#f4f7f2] p-2">
-                  <div className="mb-2 h-10 rounded-xl bg-white" />
-                  <MockupBar className="mb-2 w-2/3" />
-                  <MockupBar className="w-1/2" />
-                </div>
-              </div>
-            </div>
-            <div className="rounded-2xl border border-white/80 bg-white/90 p-3 shadow-sm">
-              <div className="mb-2 flex items-center gap-2">
-                <ShieldCheck size={12} className="text-[#2c3a30]" />
-                <MockupBar className="w-20" />
-              </div>
-              <div className="flex gap-2">
-                <span className="h-2.5 w-16 rounded-full bg-[#2c3a30]/10" />
-                <span className="h-2.5 w-12 rounded-full bg-[#d6b25e]/16" />
-                <span className="h-2.5 w-14 rounded-full bg-[#0fa37f]/12" />
-              </div>
-            </div>
-          </div>
+      <div className="relative h-full overflow-hidden rounded-[26px] border border-[#d2dfcd] bg-[#f8faf6] p-2 shadow-[0_18px_50px_rgba(44,58,48,0.10)] sm:rounded-[30px] sm:p-3">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/10" />
+        <img
+          src="/landing-previews/realestate-gateway.png"
+          alt="قسم العقارات في دليل السبحي"
+          className="h-full w-full rounded-[22px] object-cover object-top shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] sm:rounded-[26px]"
+          loading="eager"
+        />
+        <div className="pointer-events-none absolute inset-0 rounded-[26px] ring-1 ring-inset ring-white/35 sm:rounded-[30px]" />
+        <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold text-[#2c3a30] shadow-sm backdrop-blur">
+          <Building2 size={11} className="text-[#2c3a30]" />
+          <span>العقارات</span>
         </div>
       </div>
     </MockupShell>
