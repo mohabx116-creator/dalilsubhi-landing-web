@@ -9,7 +9,7 @@ export const COMMUNITY_HUB_URL = getEnvUrl(
   import.meta.env.VITE_COMMUNITY_URL,
   'https://services-ds-core-91.dalilsubhi.com/community',
 );
-export const RENTALS_URL = getEnvUrl(import.meta.env.VITE_RENTALS_URL, 'https://rentals-ds-core-91.dalilsubhi.com/rentals');
+export const RENTALS_URL = 'https://rentals-ds-core-91.dalilsubhi.com/rentals';
 export const REAL_ESTATE_URL = getEnvUrl(
   import.meta.env.VITE_REAL_ESTATE_URL,
   'https://realestate-ds-core-91.dalilsubhi.com',
