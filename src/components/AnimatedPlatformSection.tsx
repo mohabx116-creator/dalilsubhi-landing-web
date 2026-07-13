@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
 import { Building2, Home, Users, Zap } from 'lucide-react';
 import dalilSubhiLogoFancy from '../assets/dalil-subhi-logo-fancy.png';
 import communityMotion from '../assets/community-motion.png';
@@ -6,50 +7,69 @@ import rentalsMotion from '../assets/rentals-motion.png';
 import { fetchPlatformStats } from '../lib/platform-stats';
 import type { PlatformStatsData } from '../types/platform-stats';
 
+type HighlightCard = {
+  id: string;
+  icon: ReactNode;
+  title: string;
+  desc: string;
+};
+
+function getPositiveStat(stats: PlatformStatsData | null, field: keyof PlatformStatsData) {
+  if (!stats || stats.isFallback) {
+    return null;
+  }
+
+  if (stats.unavailableCounts.includes(field)) {
+    return null;
+  }
+
+  const value = stats[field];
+  return typeof value === 'number' && value > 0 ? value : null;
+}
+
 export default function AnimatedPlatformSection() {
   const [stats, setStats] = useState<PlatformStatsData | null>(null);
 
   useEffect(() => {
-    let mounted = true;
+    let active = true;
+
     fetchPlatformStats().then((data) => {
-      if (mounted && data) {
+      if (active && data) {
         setStats(data);
       }
     });
+
     return () => {
-      mounted = false;
+      active = false;
     };
   }, []);
 
-  const getStat = (field: keyof PlatformStatsData) => {
-    if (!stats || stats.isFallback) return null;
-    if (stats.unavailableCounts.includes(field)) return null;
-    const val = stats[field];
-    return typeof val === 'number' && val > 0 ? val : null;
-  };
+  const servicesStat = getPositiveStat(stats, 'servicesCount');
+  const realEstateStat = getPositiveStat(stats, 'realEstateListingsCount');
+  const communityStat = getPositiveStat(stats, 'categoriesCount');
+  const rentalStat = getPositiveStat(stats, 'rentalListingsCount');
 
-  const servicesStat = getStat('servicesCount');
-  const realEstateStat = getStat('realEstateListingsCount');
-  const communityStat = getStat('categoriesCount'); // Categories representation of community
-  const rentalStat = getStat('rentalListingsCount');
-
-  const highlights = [
+  const highlights: HighlightCard[] = [
     {
+      id: 'services',
       icon: <Zap className="h-5 w-5 text-[#d6b25e]" />,
       title: servicesStat ? `${servicesStat} خدمة محلية` : 'خدمات محلية منظمة',
       desc: 'دليل متكامل لأفضل الخدمات في المنطقة',
     },
     {
+      id: 'real-estate',
       icon: <Home className="h-5 w-5 text-[#d6b25e]" />,
       title: realEstateStat ? `${realEstateStat} عقار متاح` : 'عقارات وإيجارات في مكان واحد',
       desc: 'تصفح أحدث العروض والوحدات المتاحة',
     },
     {
+      id: 'community',
       icon: <Users className="h-5 w-5 text-[#d6b25e]" />,
       title: communityStat ? `${communityStat} قسم منظم` : 'بوابة مجتمعية للمنطقة',
       desc: 'تواصل وتفاعل مع جيرانك بكل سهولة',
     },
     {
+      id: 'rentals',
       icon: <Building2 className="h-5 w-5 text-[#d6b25e]" />,
       title: rentalStat ? `${rentalStat} وحدة للإيجار` : 'تجربة موحدة للخدمات والعقارات',
       desc: 'واجهة بسيطة تجمع كل احتياجاتك',
@@ -58,7 +78,7 @@ export default function AnimatedPlatformSection() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#071614] to-[#0a2420] py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(15,163,127,0.14),transparent_24%),radial-gradient(circle_at_80%_80%,rgba(214,178,94,0.10),transparent_22%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(15,163,127,0.14),transparent_24%),radial-gradient(circle_at_80%_80%,rgba(214,178,94,0.1),transparent_22%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -81,11 +101,11 @@ export default function AnimatedPlatformSection() {
 
             <div className="grid gap-6 sm:grid-cols-2">
               {highlights.map((item) => (
-                <div key={item.title} className="flex gap-4">
+                <div key={item.id} className="flex min-h-[5rem] gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5">
                     {item.icon}
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="mb-1 font-bold text-white">{item.title}</h3>
                     <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
@@ -94,11 +114,11 @@ export default function AnimatedPlatformSection() {
             </div>
           </div>
 
-          <div className="relative mx-auto flex h-[480px] w-full max-w-[360px] items-center justify-center sm:max-w-[420px] lg:max-w-none lg:h-[600px]">
+          <div className="relative mx-auto flex h-[480px] w-full max-w-[360px] items-center justify-center sm:max-w-[420px] lg:h-[600px] lg:max-w-none">
             <div className="pointer-events-none absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0fa37f] opacity-20 blur-[90px] sm:h-[400px] sm:w-[400px] sm:blur-[110px]" />
 
             <div
-              className="absolute right-0 top-2 h-[460px] w-[220px] origin-bottom overflow-hidden rounded-[2.25rem] border-[6px] border-[#111] bg-[#06110f] shadow-2xl opacity-90 sm:right-8 sm:top-10 sm:h-[540px] sm:w-[260px] sm:border-[8px] animate-float transform -rotate-6"
+              className="absolute right-0 top-2 h-[460px] w-[220px] origin-bottom overflow-hidden rounded-[2.25rem] border-[6px] border-[#111] bg-[#06110f] opacity-90 shadow-2xl sm:right-8 sm:top-10 sm:h-[540px] sm:w-[260px] sm:border-[8px] animate-float transform -rotate-6"
               style={{ animationDelay: '0s' }}
             >
               <div className="absolute inset-x-0 top-0 z-10 flex h-6 justify-center">
@@ -163,7 +183,7 @@ export default function AnimatedPlatformSection() {
                     />
                   </div>
                   <h3 className="text-[12px] font-black leading-tight text-[#2d2413] sm:text-sm">
-                    منصة أمنا لجميع خدمات المنطقة
+                    منصة آمنة لجميع خدمات المنطقة
                   </h3>
                   <p className="mt-1 max-w-[170px] text-[9px] leading-4 text-[#6f6140] sm:text-[10px]">
                     بوابة موثوقة تجمع الخدمات، الإيجارات، والعقارات في مكان واحد.

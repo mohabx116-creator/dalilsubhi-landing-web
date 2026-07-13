@@ -38,4 +38,13 @@ export default defineConfig({
       },
     },
   ],
+  server: {
+    proxy: {
+      '/api/v1/public/platform-stats': {
+        target: 'https://compound-os-api-replica.onrender.com',
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
 })

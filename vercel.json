@@ -1,5 +1,9 @@
 {
   "rewrites": [
+    {
+      "source": "/api/v1/public/platform-stats",
+      "destination": "https://compound-os-api-replica.onrender.com/api/v1/public/platform-stats"
+    },
     { "source": "/((?!robots\\.txt|sitemap\\.xml|.*\\..*).*)", "destination": "/index.html" }
   ]
 }
