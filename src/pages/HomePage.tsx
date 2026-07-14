@@ -1,8 +1,6 @@
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import FacilitiesSection from '../components/FacilitiesSection';
-import CommunityLinksSection from '../components/CommunityLinksSection';
-import AboutSection from '../components/AboutSection';
 import SiteRatingPrompt from '../components/SiteRatingPrompt';
 import Footer from '../components/Footer';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
@@ -26,8 +24,6 @@ export default function HomePage() {
         <main>
           <HeroSection />
           <FacilitiesSection />
-          <CommunityLinksSection />
-          <AboutSection />
         </main>
         <Footer />
         <SiteRatingPrompt />
