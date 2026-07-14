@@ -1,11 +1,8 @@
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
-import MainGatewaySection from '../components/MainGatewaySection';
-import ServicesSection from '../components/ServicesSection';
 import FacilitiesSection from '../components/FacilitiesSection';
 import CommunityLinksSection from '../components/CommunityLinksSection';
 import AboutSection from '../components/AboutSection';
-import AnimatedPlatformSection from '../components/AnimatedPlatformSection';
 import SiteRatingPrompt from '../components/SiteRatingPrompt';
 import Footer from '../components/Footer';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
@@ -28,9 +25,6 @@ export default function HomePage() {
         <Header />
         <main>
           <HeroSection />
-          <MainGatewaySection />
-          <AnimatedPlatformSection />
-          <ServicesSection />
           <FacilitiesSection />
           <CommunityLinksSection />
           <AboutSection />
