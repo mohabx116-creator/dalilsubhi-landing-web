@@ -1,12 +1,12 @@
 import { Bell, Building2, KeyRound, MessageCircle, ShieldCheck, Sparkles } from 'lucide-react';
 
 const facilities = [
-  { title: 'بيئة سكنية منظمة', icon: Building2, description: 'محتوى واضح يساعدك في الوصول إلى خدمات المنطقة وروابطها الأساسية.' },
-  { title: 'متابعة أخبار المنطقة', icon: Bell, description: 'محتوى واضح يساعدك في الوصول إلى خدمات المنطقة وروابطها الأساسية.' },
-  { title: 'دليل الإيجارات', icon: KeyRound, description: 'نلتزم بمعايير واضحة للنشر والاعلان بما يحفظ جودة المحتوى وموثوقيته' },
-  { title: 'إدارة رقمية آمنة', icon: ShieldCheck, description: 'محتوى واضح يساعدك في الوصول إلى خدمات المنطقة وروابطها الأساسية.' },
-  { title: 'تواصل ودعم', icon: MessageCircle, description: 'محتوى واضح يساعدك في الوصول إلى خدمات المنطقة وروابطها الأساسية.' },
-  { title: 'تجربة استخدام حديثة', icon: Sparkles, description: 'محتوى واضح يساعدك في الوصول إلى خدمات المنطقة وروابطها الأساسية.' },
+  { title: 'بيئة سكنية منظمة', icon: Building2, description: 'بنوفر لك كل الخدمات والمرافق اللي بتحتاجها في مكان واحد، عشان تعيش براحة وتوفر وقتك.' },
+  { title: 'متابعة أخبار المنطقة', icon: Bell, description: 'خليك دايمًا في الصورة واعرف أحدث الأخبار والأنشطة اللي بتهم سكان المنطقة أول بأول.' },
+  { title: 'موثوقية المحتوى', icon: Sparkles, description: 'نلتزم بمعايير واضحة للنشر والاعلان بما يحفظ جودة المحتوى وموثوقيته.' },
+  { title: 'إدارة رقمية آمنة', icon: ShieldCheck, description: 'بنهتم بتأمين بياناتك وتوفير بيئة رقمية آمنة ومريحة في كل تعاملاتك داخل المنصة.' },
+  { title: 'تواصل ودعم', icon: MessageCircle, description: 'لو احتجت أي مساعدة أو واجهتك مشكلة، فريقنا دايماً موجود عشان يسمعك ويساعدك.' },
+  { title: 'دليل الإيجارات', icon: KeyRound, description: 'تصفح كل الشقق والمحلات المتاحة للإيجار في المنطقة، وتواصل مع الملاك مباشرة بدون وسطاء.' },
 ];
 
 export default function FacilitiesSection() {
