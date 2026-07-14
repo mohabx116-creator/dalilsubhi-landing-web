@@ -1,13 +1,14 @@
-import { Building2, Home, Map, Wrench } from 'lucide-react';
+import { Building, Key, Users, Wrench } from 'lucide-react';
+import { COMMUNITY_HUB_URL, SERVICES_URL, RENTALS_URL, REAL_ESTATE_URL } from '../lib/config/links';
 import heroBg from '../assets/sebahi-gardens-hero.png';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
 
 export default function HeroSection() {
   const highlights = [
-    { label: 'البوابة المجتمعية', icon: Map, tone: 'text-[#0fa37f]', href: '#community' },
-    { label: 'الخدمات', icon: Wrench, tone: 'text-[#0fa37f]', href: '#services' },
-    { label: 'الإيجارات', icon: Home, tone: 'text-[#d6b25e]', href: '#rentals-card' },
-    { label: 'العقارات', icon: Building2, tone: 'text-[#8a6d22]', href: '#realestate-card' },
+    { label: 'البوابة المجتمعية', icon: Users, tone: 'text-[#0fa37f]', href: COMMUNITY_HUB_URL },
+    { label: 'الخدمات', icon: Wrench, tone: 'text-[#0fa37f]', href: SERVICES_URL },
+    { label: 'الإيجارات', icon: Key, tone: 'text-[#d6b25e]', href: RENTALS_URL },
+    { label: 'العقارات', icon: Building, tone: 'text-[#8a6d22]', href: REAL_ESTATE_URL },
   ] as const;
 
   return (
@@ -52,14 +53,14 @@ export default function HeroSection() {
             <a
               key={label}
               href={href}
-              className="group flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between rounded-xl border border-[#ebdcb9]/40 bg-white/60 p-2 sm:px-4 sm:py-3 shadow-[0_4px_20px_rgba(7,22,20,0.01)] backdrop-blur-md gap-1.5 sm:gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d6b25e] hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
+              className="group flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between rounded-2xl border border-[#ebdcb9]/40 bg-white/60 p-3 sm:px-5 sm:py-4 shadow-[0_8px_30px_rgba(7,22,20,0.03)] backdrop-blur-md gap-2 sm:gap-3 transition-all duration-300 hover:-translate-y-1 hover:border-[#d6b25e]/60 hover:bg-white hover:shadow-[0_12px_40px_rgba(214,178,94,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
             >
               <div className="text-center sm:text-right">
-                <p className="text-[9px] font-bold text-[#8c7a52] sm:text-[10px] hidden sm:block">القسم</p>
-                <p className="text-xs sm:text-sm font-black text-[#071614]">{label}</p>
+                <p className="text-[10px] font-bold text-[#8c7a52] sm:text-xs hidden sm:block mb-0.5">القسم</p>
+                <p className="text-sm sm:text-base font-black text-[#071614]">{label}</p>
               </div>
-              <span className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl bg-white border border-gray-100 ${tone} shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ebdcb9]/15 group-hover:border-[#ebdcb9]/30`}>
-                <Icon className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
+              <span className={`flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-white border border-gray-100 ${tone} shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ebdcb9]/15 group-hover:border-[#ebdcb9]/30`}>
+                <Icon className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.5]" />
               </span>
             </a>
           ))}
