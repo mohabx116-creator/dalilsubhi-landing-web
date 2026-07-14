@@ -1,14 +1,14 @@
-import { Building, Key, Users, Wrench } from 'lucide-react';
+
 import { COMMUNITY_HUB_URL, SERVICES_URL, RENTALS_URL, REAL_ESTATE_URL } from '../lib/config/links';
 import heroBg from '../assets/sebahi-gardens-hero.png';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
 
 export default function HeroSection() {
   const highlights = [
-    { label: 'البوابة المجتمعية', icon: Users, tone: 'text-[#0fa37f]', href: COMMUNITY_HUB_URL },
-    { label: 'الخدمات', icon: Wrench, tone: 'text-[#0fa37f]', href: SERVICES_URL },
-    { label: 'الإيجارات', icon: Key, tone: 'text-[#d6b25e]', href: RENTALS_URL },
-    { label: 'العقارات', icon: Building, tone: 'text-[#8a6d22]', href: REAL_ESTATE_URL },
+    { label: 'البوابة المجتمعية', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/People%20hugging/3D/people_hugging_3d.png', href: COMMUNITY_HUB_URL },
+    { label: 'الخدمات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Briefcase/3D/briefcase_3d.png', href: SERVICES_URL },
+    { label: 'الإيجارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png', href: RENTALS_URL },
+    { label: 'العقارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20building/3D/office_building_3d.png', href: REAL_ESTATE_URL },
   ] as const;
 
   return (
@@ -49,7 +49,7 @@ export default function HeroSection() {
 
 
         <div className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-2 text-right sm:grid-cols-4 sm:gap-3">
-          {highlights.map(({ label, icon: Icon, tone, href }) => (
+          {highlights.map(({ label, imageUrl, href }) => (
             <a
               key={label}
               href={href}
@@ -59,8 +59,8 @@ export default function HeroSection() {
                 <p className="text-[10px] font-bold text-[#8c7a52] sm:text-xs hidden sm:block mb-0.5">القسم</p>
                 <p className="text-sm sm:text-base font-black text-[#071614]">{label}</p>
               </div>
-              <span className={`flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-white border border-gray-100 ${tone} shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ebdcb9]/15 group-hover:border-[#ebdcb9]/30`}>
-                <Icon className="h-6 w-6 sm:h-7 sm:w-7 stroke-[2.5]" />
+              <span className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[#fcf9f2] border border-[#ebdcb9]/60 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ebdcb9]/30 group-hover:border-[#ebdcb9]">
+                <img src={imageUrl} alt={label} className="h-8 w-8 sm:h-9 sm:w-9 object-contain drop-shadow-sm" loading="lazy" />
               </span>
             </a>
           ))}
