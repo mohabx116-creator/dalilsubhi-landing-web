@@ -31,7 +31,7 @@ export default function HeroSection() {
         </div>
 
         <div className="mx-auto flex flex-col items-center justify-center pt-1 pb-3 sm:pt-4">
-          <div className="relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border border-[#ebdcb9]/40 bg-white/80 shadow-[0_8px_30px_rgba(214,178,94,0.08)] backdrop-blur-sm transition-transform duration-700 hover:scale-[1.02] sm:h-56 sm:w-56 md:h-64 md:w-64">
+          <div className="relative flex h-44 w-44 items-center justify-center overflow-hidden rounded-full border border-[#ebdcb9]/40 bg-white/80 shadow-[0_8px_30px_rgba(214,178,94,0.08)] backdrop-blur-sm transition-transform duration-700 hover:scale-[1.02] sm:h-72 sm:w-72 md:h-96 md:w-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#d6b25e]/5 via-transparent to-transparent opacity-50" />
             <img
               src={dalilSubhiLogo}
@@ -46,14 +46,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="max-w-3xl">
-          <h1 className="text-2xl font-black leading-snug tracking-tight text-[#071614] sm:text-4xl md:text-5xl">
-            دليل السبحي: منصة آمنة تجمع الخدمات والإيجارات والعقارات
-          </h1>
-          <p className="mx-auto mt-3 max-w-2xl text-xs sm:text-base leading-relaxed text-[#55605d]">
-            ابحث بثقة عن ما تحتاجه في المنطقة، مع مسارات واضحة ومباشرة لكل قسم.
-          </p>
-        </div>
 
         <div className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-2 text-right sm:grid-cols-4 sm:gap-3">
           {highlights.map(({ label, icon: Icon, tone, href }) => (
