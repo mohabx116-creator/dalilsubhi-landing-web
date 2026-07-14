@@ -5,7 +5,7 @@ import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
 
 export default function HeroSection() {
   const highlights = [
-    { label: 'البوابة المجتمعية', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/People%20hugging/3D/people_hugging_3d.png', href: COMMUNITY_HUB_URL },
+    { label: 'البوابة المجتمعية', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Handshake/3D/handshake_3d.png', href: COMMUNITY_HUB_URL },
     { label: 'الخدمات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Briefcase/3D/briefcase_3d.png', href: SERVICES_URL },
     { label: 'الإيجارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png', href: RENTALS_URL },
     { label: 'العقارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20building/3D/office_building_3d.png', href: REAL_ESTATE_URL },
