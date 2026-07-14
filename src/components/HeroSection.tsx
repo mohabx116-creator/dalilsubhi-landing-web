@@ -2,11 +2,12 @@
 import { COMMUNITY_HUB_URL, SERVICES_URL, RENTALS_URL, REAL_ESTATE_URL } from '../lib/config/links';
 import heroBg from '../assets/sebahi-gardens-hero.png';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
+import servicesIcon from '../assets/services-icon.webp';
 
 export default function HeroSection() {
   const highlights = [
     { label: 'البوابة المجتمعية', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Handshake/3D/handshake_3d.png', href: COMMUNITY_HUB_URL },
-    { label: 'الخدمات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Shopping%20bags/3D/shopping_bags_3d.png', href: SERVICES_URL },
+    { label: 'الخدمات', imageUrl: servicesIcon, href: SERVICES_URL },
     { label: 'الإيجارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png', href: RENTALS_URL },
     { label: 'العقارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20building/3D/office_building_3d.png', href: REAL_ESTATE_URL },
   ] as const;
@@ -56,7 +57,6 @@ export default function HeroSection() {
               className="group flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between rounded-2xl border border-[#ebdcb9]/40 bg-white/60 p-3 sm:px-5 sm:py-4 shadow-[0_8px_30px_rgba(7,22,20,0.03)] backdrop-blur-md gap-2 sm:gap-3 transition-all duration-300 hover:-translate-y-1 hover:border-[#d6b25e]/60 hover:bg-white hover:shadow-[0_12px_40px_rgba(214,178,94,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6b25e]"
             >
               <div className="text-center sm:text-right">
-                <p className="text-[10px] font-bold text-[#8c7a52] sm:text-xs hidden sm:block mb-0.5">القسم</p>
                 <p className="text-sm sm:text-base font-black text-[#071614]">{label}</p>
               </div>
               <span className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[#fcf9f2] border border-[#ebdcb9]/60 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ebdcb9]/30 group-hover:border-[#ebdcb9]">
