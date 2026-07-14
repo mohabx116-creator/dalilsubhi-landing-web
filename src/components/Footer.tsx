@@ -56,7 +56,7 @@ export default function Footer() {
 
           <div>
             <h3 className="mb-5 text-lg font-bold text-[#071614]">تواصل معنا</h3>
-            <ul className="space-y-3 text-sm font-medium leading-7 text-gray-600">
+            <ul className="space-y-3 text-sm font-medium leading-7">
               <li>
                 <a
                   href={WHATSAPP_GROUP_URL}
