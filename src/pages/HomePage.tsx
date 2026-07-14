@@ -9,7 +9,7 @@ import AnimatedPlatformSection from '../components/AnimatedPlatformSection';
 import SiteRatingPrompt from '../components/SiteRatingPrompt';
 import Footer from '../components/Footer';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
-import { OWNERS_URL } from '../lib/config/links';
+
 
 export default function HomePage() {
   return (
