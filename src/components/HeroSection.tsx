@@ -3,10 +3,11 @@ import { COMMUNITY_HUB_URL, SERVICES_URL, RENTALS_URL, REAL_ESTATE_URL } from '.
 import heroBg from '../assets/sebahi-gardens-hero.png';
 import dalilSubhiLogo from '../assets/dalil-subhi-logo.jpg';
 import servicesIcon from '../assets/services-icon.webp';
+import communityIcon from '../assets/community-icon.jpeg';
 
 export default function HeroSection() {
   const highlights = [
-    { label: 'البوابة المجتمعية', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Handshake/3D/handshake_3d.png', href: COMMUNITY_HUB_URL },
+    { label: 'البوابة المجتمعية', imageUrl: communityIcon, href: COMMUNITY_HUB_URL },
     { label: 'خدمات المنطقة', imageUrl: servicesIcon, href: SERVICES_URL },
     { label: 'الإيجارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png', href: RENTALS_URL },
     { label: 'العقارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20building/3D/office_building_3d.png', href: REAL_ESTATE_URL },
