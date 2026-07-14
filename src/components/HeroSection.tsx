@@ -26,11 +26,6 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-8 sm:py-14 text-center sm:px-6 lg:px-8 lg:pt-16">
-        <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#ebdcb9] bg-white/80 px-3.5 py-1.5 text-xs font-bold text-[#5d4c18] shadow-sm backdrop-blur-md">
-          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#0fa37f]" />
-          بوابة آمنة وشاملة للمنطقة
-        </div>
-
         <div className="mx-auto flex flex-col items-center justify-center pt-1 pb-3 sm:pt-4">
           <div className="relative flex h-44 w-44 items-center justify-center overflow-hidden rounded-full border border-[#ebdcb9]/40 bg-white/80 shadow-[0_8px_30px_rgba(214,178,94,0.08)] backdrop-blur-sm transition-transform duration-700 hover:scale-[1.02] sm:h-72 sm:w-72 md:h-96 md:w-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#d6b25e]/5 via-transparent to-transparent opacity-50" />
@@ -45,6 +40,11 @@ export default function HeroSection() {
               fetchPriority="high"
             />
           </div>
+        </div>
+
+        <div className="mt-2 mb-6 inline-flex items-center gap-1.5 rounded-full border border-[#ebdcb9] bg-white/80 px-3.5 py-1.5 text-xs font-bold text-[#5d4c18] shadow-sm backdrop-blur-md">
+          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#0fa37f]" />
+          المنصة الامنة لجميع خدمات المنطقة
         </div>
 
 
