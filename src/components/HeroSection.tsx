@@ -7,7 +7,7 @@ import servicesIcon from '../assets/services-icon.webp';
 export default function HeroSection() {
   const highlights = [
     { label: 'البوابة المجتمعية', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Handshake/3D/handshake_3d.png', href: COMMUNITY_HUB_URL },
-    { label: 'الخدمات', imageUrl: servicesIcon, href: SERVICES_URL },
+    { label: 'خدمات المنطقة', imageUrl: servicesIcon, href: SERVICES_URL },
     { label: 'الإيجارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png', href: RENTALS_URL },
     { label: 'العقارات', imageUrl: 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Office%20building/3D/office_building_3d.png', href: REAL_ESTATE_URL },
   ] as const;
@@ -60,7 +60,7 @@ export default function HeroSection() {
                 <p className="text-sm sm:text-base font-black text-[#071614]">{label}</p>
               </div>
               <span className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[#fcf9f2] border border-[#ebdcb9]/60 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ebdcb9]/30 group-hover:border-[#ebdcb9]">
-                <img src={imageUrl} alt={label} className="h-8 w-8 sm:h-9 sm:w-9 object-contain drop-shadow-sm" loading="lazy" />
+                <img src={imageUrl} alt={label} className="h-10 w-10 sm:h-12 sm:w-12 object-contain drop-shadow-sm scale-110" loading="lazy" />
               </span>
             </a>
           ))}
