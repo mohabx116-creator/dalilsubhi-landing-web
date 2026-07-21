@@ -46,10 +46,8 @@ export default function HeroSection() {
 
         <div className="mt-2 mb-6 inline-flex items-center gap-1.5 rounded-full border border-[#ebdcb9] bg-white/80 px-3.5 py-1.5 text-xs font-bold text-[#5d4c18] shadow-sm backdrop-blur-md">
           <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#0fa37f]" />
-          المنصة الامنة لجميع خدمات المنطقة
+          المنصة الآمنة لجميع خدمات المنطقة
         </div>
-
-
         <div className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-2 text-right sm:grid-cols-4 sm:gap-3">
           {highlights.map(({ label, imageUrl, href }) => (
             <a
