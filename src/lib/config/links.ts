@@ -14,8 +14,6 @@ export const REAL_ESTATE_URL = getEnvUrl(
   import.meta.env.VITE_REAL_ESTATE_URL,
   'https://realestate-ds-core-91.dalilsubhi.com',
 );
-export const RESIDENT_APP_URL = getEnvUrl(import.meta.env.VITE_RESIDENT_APP_URL, 'https://app-ds-core-91.dalilsubhi.com');
-export const ADMIN_URL = getEnvUrl(import.meta.env.VITE_ADMIN_URL, 'https://ds-ops-7x.dalilsubhi.com');
 export const OWNERS_URL = getEnvUrl(import.meta.env.VITE_OWNERS_URL, `${RENTALS_URL}/owners/list-your-unit`);
 export const WHATSAPP_GROUP_URL = getEnvUrl(
   import.meta.env.VITE_WHATSAPP_GROUP_URL,
